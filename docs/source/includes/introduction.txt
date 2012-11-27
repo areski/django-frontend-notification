@@ -1,0 +1,63 @@
+:Version: 0.1.0
+:Keywords: django, python
+
+--
+
+.. _django-frontend-notification-synopsis:
+
+django-frontend-notification is an application written in Python, using the ``Django`` Framework.
+
+The license is MIT.
+
+
+
+.. _overview:
+
+Overview
+========
+
+This is a Django Application to display quickly on frontend the list of notification and run some actions.
+
+
+.. _documentation:
+
+Documentation
+=============
+
+Extensive documentation is available on 'Read the Docs':
+http://django-frontend-notification.readthedocs.org
+
+
+.. _contributing:
+
+Contributing
+============
+
+If you've found a bug, implemented a feature or customized the template and
+think it is useful then please consider contributing. Patches, pull requests or
+just suggestions are welcome!
+
+Source code: http://github.com/Star2Billing/django-frontend-notification
+
+
+If you don’t like Github and Git you’re welcome to send regular patches.
+
+Bug tracker: https://github.com/Star2Billing/django-frontend-notification/issues
+
+.. _license:
+
+License
+=======
+
+Copyright (c) 2011-2012 Star2Billing S.L. <info@star2billing.com>
+
+django-frontend-notification is licensed under MIT, see `MIT-LICENSE.txt`.
+
+
+.. _credit:
+
+Credit
+======
+
+django-frontend-notification is a Star2Billing-Sponsored Community Project, for more information visit
+http://www.star2billing.com  or email us at info@star2billing.com
