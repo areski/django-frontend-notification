@@ -13,7 +13,7 @@
 from django.contrib.auth.models import User
 from django.test import TestCase
 from common.utils import BaseAuthenticatedClient
-from common_notification.views import user_notification,\
+from frontend_notification.views import user_notification,\
     notification_del_read,\
     update_notification
 
@@ -29,7 +29,7 @@ class NotificationCustomerView(BaseAuthenticatedClient):
             '/user_notification/?notification=mark_read_all', {})
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response,
-            'frontend/common_notification/user_notification.html')
+            'frontend/frontend_notification/user_notification.html')
 
         request = self.factory.get('/user_notification/')
         request.user = self.user

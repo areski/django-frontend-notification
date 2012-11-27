@@ -21,7 +21,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.db.models import Q
 from django.conf import settings
 from notification import models as notification
-from common_notification.constants import NOTICE_COLUMN_NAME
+from frontend_notification.constants import NOTICE_COLUMN_NAME
 from common.common_functions import current_view, get_pagination_vars
 
 
@@ -34,7 +34,7 @@ def notice_count(request):
     return notice_count
 
 
-def common_notification_status(request, id):
+def frontend_notification_status(request, id):
     """Notification Status (e.g. seen/unseen) need to be change.
     It is a common function for admin and customer UI
 
@@ -111,7 +111,7 @@ def user_notification(request):
         msg_note = _('All notifications are marked as read.')
 
 
-    template = 'frontend/common_notification/user_notification.html'
+    template = 'frontend/frontend_notification/user_notification.html'
     data = {
         'module': current_view(request),
         'msg_note': msg_note,
@@ -178,5 +178,5 @@ def notification_del_read(request, object_id):
 def update_notification(request, id):
     """Notification Status (e.g. seen/unseen) can be changed from
     customer interface"""
-    common_notification_status(request, id)
+    frontend_notification_status(request, id)
     return HttpResponseRedirect('/user_notification/')

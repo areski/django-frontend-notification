@@ -15,7 +15,7 @@
 from django.template.defaultfilters import register
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
-from common_notification.views import notice_count
+from frontend_notification.views import notice_count
 
 
 @register.filter(name='notification_style')

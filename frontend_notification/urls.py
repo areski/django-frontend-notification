@@ -14,7 +14,7 @@
 from django.conf.urls import patterns, include
 
 
-urlpatterns = patterns('common_notification.views',
+urlpatterns = patterns('frontend_notification.views',
     # User notification for Customer UI
 
     (r'^user_notification/', 'user_notification'),
