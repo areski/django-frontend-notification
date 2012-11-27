@@ -1,8 +1,11 @@
 
-django-frontend-notification
+Django-Frontend-Notification
 ============================
 
-This is a Django Application to display quickly on frontend the list of notification and run some actions
+This is a Django Application to display quickly on frontend the list of notification and run some basic actions such as view all notifications, delete notifications, etc...
+Django-Frontend-Notification provide also some helper to display new notification.
+
+This works with twitter bootstrap (http://twitter.github.com/bootstrap/) but can easily be adapted with other front-end framework.
 
 
 Documentation
@@ -33,7 +36,6 @@ License
 Copyright (c) 2011-2012 Star2Billing S.L. <info@star2billing.com>
 
 django-frontend-notification is licensed under MIT, see `MIT-LICENSE.txt`.
-
 
 
 Credit
