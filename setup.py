@@ -38,7 +38,7 @@ setup(
     version=frontend_notification.__version__,
     description='',
     long_description=README,
-    url='http://github.com/Star2Billing/django-frontend-notification',
+    url='http://github.com/areski/django-frontend-notification',
     author='Belaid Arezqui',
     author_email='areski@gmail.com',
     license='MIT License',

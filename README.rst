@@ -6,7 +6,7 @@ Django application to display on the frontend the list of notifications and run 
 This works with twitter bootstrap (http://twitter.github.com/bootstrap/) but can easily be adapted with other front-end frameworks.
 
 
-.. image:: https://github.com/Star2Billing/django-frontend-notification/raw/master/docs/source/_static/django-frontend-notification.png
+.. image:: https://github.com/areski/django-frontend-notification/raw/master/docs/source/_static/django-frontend-notification.png
 
 
 Documentation
@@ -20,14 +20,14 @@ Contributing
 ============
 
 If you've found a bug, implemented a feature or customized the template and
-think it is useful then please consider contributing. Patches, pull requests 
+think it is useful then please consider contributing. Patches, pull requests
 and suggestions are welcome!
 
-Source code: http://github.com/Star2Billing/django-frontend-notification
+Source code: http://github.com/areski/django-frontend-notification
 
 If you don’t like Github and Git you’re welcome to send regular patches.
 
-Bug tracker: https://github.com/Star2Billing/django-frontend-notification/issues
+Bug tracker: https://github.com/areski/django-frontend-notification/issues
 
 
 License

@@ -41,12 +41,12 @@ If you've found a bug, implemented a feature or customized the template and
 think it is useful then please consider contributing. Patches, pull requests or
 just suggestions are welcome!
 
-Source code: http://github.com/Star2Billing/django-frontend-notification
+Source code: http://github.com/areski/django-frontend-notification
 
 
 If you don’t like Github and Git you’re welcome to send regular patches.
 
-Bug tracker: https://github.com/Star2Billing/django-frontend-notification/issues
+Bug tracker: https://github.com/areski/django-frontend-notification/issues
 
 
 .. _license:
