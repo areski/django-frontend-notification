@@ -8,6 +8,9 @@ Django-Frontend-Notification provide also some helper to display new notificatio
 This works with twitter bootstrap (http://twitter.github.com/bootstrap/) but can easily be adapted with other front-end framework.
 
 
+.. image:: https://github.com/Star2Billing/django-frontend-notification/raw/master/docs/source/_static/django-frontend-notification.png
+
+
 Documentation
 =============
 
