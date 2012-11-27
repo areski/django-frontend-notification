@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-import common_notification
+import frontend_notification
 import os
 import re
 
@@ -34,11 +34,11 @@ def parse_dependency_links(file_name):
 
 
 setup(
-    name='switch2common-notification',
-    version=common_notification.__version__,
+    name='frontend-notification',
+    version=frontend_notification.__version__,
     description='',
     long_description=README,
-    url='http://github.com/Star2Billing/common_notification',
+    url='http://github.com/Star2Billing/django-frontend-notification',
     author='Belaid Arezqui',
     author_email='areski@gmail.com',
     license='MIT License',
