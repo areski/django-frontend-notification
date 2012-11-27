@@ -14,7 +14,6 @@
 
 from django.template.defaultfilters import register
 from django.utils.translation import ugettext_lazy as _
-from django.conf import settings
 from frontend_notification.views import notice_count
 
 

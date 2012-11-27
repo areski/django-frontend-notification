@@ -10,16 +10,12 @@
 # The Initial Developer of the Original Code is
 # Arezqui Belaid <info@star2billing.com>
 #
-from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-
 from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from django.template.context import RequestContext
 from django.utils.translation import ugettext_lazy as _
-
 from django.db.models import Q
-from django.conf import settings
 from notification import models as notification
 from frontend_notification.constants import NOTICE_COLUMN_NAME
 from common.common_functions import current_view, get_pagination_vars
@@ -110,7 +106,6 @@ def user_notification(request):
         notification_list.update(unseen=0)
         msg_note = _('All notifications are marked as read.')
 
-
     template = 'frontend/frontend_notification/user_notification.html'
     data = {
         'module': current_view(request),
@@ -145,11 +140,11 @@ def notification_del_read(request, object_id):
         if object_id:
             if request.POST.get('mark_read') == 'false':
                 request.session["msg_note"] = _('"%(name)s" is deleted.')\
-                                              % {'name': notification_obj.notice_type}
+                    % {'name': notification_obj.notice_type}
                 notification_obj.delete()
             else:
                 request.session["msg_note"] = _('"%(name)s" is marked as read.')\
-                                              % {'name': notification_obj.notice_type}
+                    % {'name': notification_obj.notice_type}
                 notification_obj.update(unseen=0)
 
             return HttpResponseRedirect(
@@ -162,12 +157,12 @@ def notification_del_read(request, object_id):
             notification.Notice.objects.extra(where=['id IN (%s)' % values])
         if request.POST.get('mark_read') == 'false':
             request.session["msg_note"] =\
-            _('%(count)s notification(s) are deleted.')\
+                _('%(count)s notification(s) are deleted.')\
                 % {'count': notification_list.count()}
             notification_list.delete()
         else:
             request.session["msg_note"] =\
-            _('%(count)s notification(s) are marked as read.')\
+                _('%(count)s notification(s) are marked as read.')\
                 % {'count': notification_list.count()}
             notification_list.update(unseen=0)
         return HttpResponseRedirect(

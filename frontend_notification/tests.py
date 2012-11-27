@@ -10,12 +10,9 @@
 # The Initial Developer of the Original Code is
 # Arezqui Belaid <info@star2billing.com>
 #
-from django.contrib.auth.models import User
-from django.test import TestCase
 from common.utils import BaseAuthenticatedClient
 from frontend_notification.views import user_notification,\
-    notification_del_read,\
-    update_notification
+    notification_del_read, update_notification
 
 
 class NotificationCustomerView(BaseAuthenticatedClient):
@@ -69,4 +66,3 @@ class NotificationCustomerView(BaseAuthenticatedClient):
         request.session = {}
         response = update_notification(request, 1)
         self.assertEqual(response.status_code, 302)
-
