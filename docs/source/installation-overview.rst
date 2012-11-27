@@ -34,7 +34,7 @@ Use PIP to install the dependencies listed in the requirments file,::
 Configuration
 =============
 
-Add ``audiofield`` into INSTALLED_APPS in settings.py::
+Add ``frontend-notification`` into INSTALLED_APPS in settings.py::
 
     INSTALLED_APPS = (
         ...
