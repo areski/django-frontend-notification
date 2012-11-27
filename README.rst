@@ -1,10 +1,9 @@
-
 Django-Frontend-Notification
 ============================
 
-Django application to quickly display on the frontend the list of notifications and run some basic actions such as "view all notifications", "delete notifications", etc... Django-Frontend-Notification also provides some helpers to display new notifications.
+Django application to display on the frontend the list of notifications and run some basic actions such as "view all notifications", "delete notifications", etc... Django-Frontend-Notification also provides helpers to display new notifications.
 
-This works with twitter bootstrap (http://twitter.github.com/bootstrap/) but can easily be adapted with other front-end framework.
+This works with twitter bootstrap (http://twitter.github.com/bootstrap/) but can easily be adapted with other front-end frameworks.
 
 
 .. image:: https://github.com/Star2Billing/django-frontend-notification/raw/master/docs/source/_static/django-frontend-notification.png
@@ -21,11 +20,10 @@ Contributing
 ============
 
 If you've found a bug, implemented a feature or customized the template and
-think it is useful then please consider contributing. Patches, pull requests or
-just suggestions are welcome!
+think it is useful then please consider contributing. Patches, pull requests 
+and suggestions are welcome!
 
 Source code: http://github.com/Star2Billing/django-frontend-notification
-
 
 If you don’t like Github and Git you’re welcome to send regular patches.
 
