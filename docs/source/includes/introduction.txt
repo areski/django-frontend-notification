@@ -1,5 +1,5 @@
 :Version: 0.1.0
-:Keywords: django, python
+:Keywords: django, python, notification
 
 --
 
