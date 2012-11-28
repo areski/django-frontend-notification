@@ -1,7 +1,7 @@
 Django-Frontend-Notification
 ============================
 
-Django application to display on the frontend the list of notifications and run some basic actions such as "view all notifications", "delete notifications", etc... Django-Frontend-Notification also provides helpers to display new notifications.
+Django application to display on the frontend the list of notifications and run some basic actions such as "view all notifications", "delete notifications", it also provides helpers to display notifications.
 
 This works with twitter bootstrap (http://twitter.github.com/bootstrap/) but can easily be adapted with other front-end frameworks.
 
