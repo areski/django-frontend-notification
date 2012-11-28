@@ -39,4 +39,24 @@ Add ``frontend-notification`` into INSTALLED_APPS in settings.py::
     INSTALLED_APPS = (
         ...
         'frontend-notification',
-        ...)
+        ...
+        )
+
+Add ``frontend_notification_tags`` into templates to use different template tags::
+
+    {% load frontend_notification_tags %}
+
+    {% get_notice_count request %}
+
+To get count of notification in your django views, add ``notice_count``::
+
+    ...
+    from frontend_notification.views import notice_count
+    ...
+
+    def sample_view(request):
+        print notice_count(request)
+
+Download ``bootbox.js`` from bootboxjs.com_ and add into your media resource
+
+.. _bootboxjs.com: http://bootboxjs.com/#download
