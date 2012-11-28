@@ -18,13 +18,11 @@ To get started with django-frontend-notification you must have the following ins
 - Django Framework >= 1.3 (Python based Web framework)
 
 
+The requirements are installed into a virtual environement so that the dependencies of the application do not interfere with other applications on the server. More information can be found about virtualenv at : http://pypi.python.org/pypi/virtualenv
 
-.. _install_requirements:
+PIP is a tool for installing and managing Python packages, more information about PIP t : http://www.pip-installer.org/en/latest/index.html.
 
-Install requirements
-====================
-
-Use PIP to install the dependencies listed in the requirments file,::
+With PIP you can easily install all the requirements::
 
     $ pip install -r requirements.txt
 
