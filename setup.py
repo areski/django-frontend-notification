@@ -34,9 +34,9 @@ def parse_dependency_links(file_name):
 
 
 setup(
-    name='frontend-notification',
+    name='django-frontend-notification',
     version=frontend_notification.__version__,
-    description='',
+    description='django application to display list of notifications, run basic actions such as view all notifications and delete notifications',
     long_description=README,
     url='http://github.com/areski/django-frontend-notification',
     author='Belaid Arezqui',
