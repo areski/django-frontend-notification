@@ -2,14 +2,24 @@
 
 Django-Frontend-Notification Views
 ==================================
-.. automodule:: frontend_notification.views
+
 
 .. _user-notification-view:
 
 :class:`user_notification`
 --------------------------
 
-  .. autofunction:: user_notification
+  User Detail change on Customer UI
+
+      **Attributes**:
+
+          * ``form`` - UserChangeDetailForm, UserChangeDetailExtendForm,
+                          PasswordChangeForm, CheckPhoneNumberForm
+          * ``template`` - 'frontend/frontend_notification/user_notification.html'
+
+      **Logic Description**:
+
+          * User is able to change his/her detail.
 
 
 .. _notification-del-read-view:
@@ -17,7 +27,16 @@ Django-Frontend-Notification Views
 :class:`notification_del_read`
 ------------------------------
 
-  .. autofunction:: notification_del_read
+  Delete notification for the logged in user
+
+      **Attributes**:
+
+          * ``object_id`` - Selected notification object
+          * ``object_list`` - Selected notification objects
+
+      **Logic Description**:
+
+          * Delete/Mark as Read the selected notification
 
 
 .. _update-notification-view:
@@ -25,7 +44,25 @@ Django-Frontend-Notification Views
 :class:`update_notification`
 ----------------------------
 
-  .. autofunction:: update_notification
+  Notification Status (e.g. seen/unseen) can be changed from
+      customer interface
+
+
+.. _frontend_send_notification-view:
+
+:class:`frontend_send_notification`
+-----------------------------------
+
+  User Notification (e.g. start | stop | pause | abort |
+      contact/campaign limit) needs to be saved.
+      It is a common function for the admin and customer UI's
+
+      **Attributes**:
+
+          * ``pk`` - primary key of the campaign record
+          * ``status`` - get label for notifications
+
+
 
 
 .. _frontend-notification-status-view:
@@ -33,7 +70,17 @@ Django-Frontend-Notification Views
 :class:`frontend_notification_status`
 -------------------------------------
 
-  .. autofunction:: frontend_notification_status
+  Notification Status (e.g. seen/unseen) need to be change.
+      It is a common function for admin and customer UI
+
+      **Attributes**:
+
+          * ``pk`` - primary key of notice record
+
+      **Logic Description**:
+
+          * Selected Notification's status need to be changed.
+            Changed status can be seen or unseen.
 
 
 .. _notice-count:
@@ -41,5 +88,5 @@ Django-Frontend-Notification Views
 :class:`notice_count`
 ---------------------
 
-  .. autofunction:: notice_count
+  Get count of logged in user's notifications
 

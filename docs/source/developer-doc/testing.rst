@@ -16,10 +16,3 @@ How to run test
 
     $ python manage.py test frontend_notification
 
-
-
-.. toctree::
-    :maxdepth: 2
-
-    ./testcases/customer-testcases
-
