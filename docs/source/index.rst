@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to django-frontend-notification's documentation!
-=============================================
+========================================================
 
 :Release: |version|
 :Date: |today|

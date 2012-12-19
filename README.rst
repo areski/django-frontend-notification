@@ -25,8 +25,6 @@ and suggestions are welcome!
 
 Source code: http://github.com/areski/django-frontend-notification
 
-If you don’t like Github and Git you’re welcome to send regular patches.
-
 Bug tracker: https://github.com/areski/django-frontend-notification/issues
 
 

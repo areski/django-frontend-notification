@@ -97,7 +97,7 @@ def user_notification(request):
 
         * ``form`` - UserChangeDetailForm, UserChangeDetailExtendForm,
                         PasswordChangeForm, CheckPhoneNumberForm
-        * ``template`` - 'frontend/registration/user_detail_change.html'
+        * ``template`` - 'frontend/frontend_notification/user_notification.html'
 
     **Logic Description**:
 
