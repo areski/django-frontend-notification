@@ -1,0 +1,1817 @@
+# CDR-Stats - PO File
+# Copyright (C) 2010 - Star2Billing S.L.
+# This file is distributed under the same license as the CDR-Stats application.
+# Areski Belaid <areski@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CDR-Stats 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-16 15:55+0530\n"
+"PO-Revision-Date: 2012-05-04 13:44-0300\n"
+"Last-Translator: Emerson Reis <eluizbr@gmail.com>\n"
+"Language-Team: Areski Belaid <areski@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: constants.py:6
+msgid "Message"
+msgstr ""
+
+#: constants.py:7
+msgid "Notice type"
+msgstr ""
+
+#: constants.py:8
+msgid "Sender"
+msgstr ""
+
+#: constants.py:9
+msgid "Date"
+msgstr "Data"
+
+#: views.py:122
+msgid "All notifications are marked as read."
+msgstr "Todas as notificações são marcadas como lidas."
+
+#: views.py:157
+#, python-format
+msgid "\"%(name)s\" is deleted."
+msgstr "\"%(name)s\" é excluído."
+
+#: views.py:161
+#, python-format
+msgid "\"%(name)s\" is marked as read."
+msgstr "\"%(name)s\" está marcada como lida."
+
+#: views.py:175
+#, python-format
+msgid "%(count)s notification(s) are deleted."
+msgstr "%(count)s de notificação (s) são excluídos."
+
+#: views.py:180
+#, fuzzy, python-format
+msgid "%(count)s notification(s) are marked as read."
+msgstr "Todas as notificações são marcadas como lidas."
+
+#: templates/frontend/frontend_notification/user_notification.html:21
+msgid "You must check at least one box!"
+msgstr "Você deve verificar pelo menos uma caixa!"
+
+#: templates/frontend/frontend_notification/user_notification.html:29
+msgid " notification(s) are going to be deleted?"
+msgstr "notificação (s) vão ser excluídos?"
+
+#: templates/frontend/frontend_notification/user_notification.html:32
+msgid " notification(s) are going to be marked as read?"
+msgstr "notificação (s) vai ser marcada como lida?"
+
+#: templates/frontend/frontend_notification/user_notification.html:51
+msgid "Notifications"
+msgstr "Notificações"
+
+#: templates/frontend/frontend_notification/user_notification.html:57
+msgid "Alert"
+msgstr "Alerta"
+
+#: templates/frontend/frontend_notification/user_notification.html:63
+#: templates/frontend/frontend_notification/user_notification.html:89
+msgid "Action"
+msgstr "Ação"
+
+#: templates/frontend/frontend_notification/user_notification.html:68
+msgid "Mark as read"
+msgstr "Marcar como lido"
+
+#: templates/frontend/frontend_notification/user_notification.html:69
+msgid "Delete notifications"
+msgstr "Excluir notificações"
+
+#: templates/frontend/frontend_notification/user_notification.html:72
+msgid "Mark all as read"
+msgstr "Marcar tudo como lido"
+
+#: templates/frontend/frontend_notification/user_notification.html:111
+msgid "no records found"
+msgstr "Não encontramos nenhuma"
+
+#: templatetags/frontend_notification_tags.py:24
+msgid "New"
+msgstr "Noticia"
+
+#: templatetags/frontend_notification_tags.py:26
+msgid "Read"
+msgstr "Ler"
+
+#~ msgid "English"
+#~ msgstr "Inglês"
+
+#~ msgid "French"
+#~ msgstr "Francês"
+
+#~ msgid "Spanish"
+#~ msgstr "Espanhol"
+
+#~ msgid "Portuguese"
+#~ msgstr "Português"
+
+#~ msgid "German"
+#~ msgstr "Alemão"
+
+#~ msgid "Russian"
+#~ msgstr "Russo"
+
+#~ msgid "CDR already exists !!"
+#~ msgstr "CDR já existe!"
+
+#~ msgid ""
+#~ "%(cdr_record_count)s Cdr(s) are uploaded, out of %(total_rows)s row(s) !!"
+#~ msgstr ""
+#~ "%(cdr_record_count)s CDR (s) foi(ram) carregado(s), fora de "
+#~ "%(total_rows)s linha(s)!"
+
+#, fuzzy
+#~ msgid "Error : invalid value for import"
+#~ msgstr ""
+#~ "Erro: valor inválido para importação! Confira exemplo de importação."
+
+#~ msgid "Import CDR"
+#~ msgstr "Importar CDR"
+
+#~ msgid "Equals"
+#~ msgstr "Igual a"
+
+#, fuzzy
+#~ msgid "Begins"
+#~ msgstr "Começa com"
+
+#~ msgid "Contains"
+#~ msgstr "Contém"
+
+#, fuzzy
+#~ msgid "Ends"
+#~ msgstr "Termina com"
+
+#~ msgid "Call-date"
+#~ msgstr "Data da Ligação"
+
+#~ msgid "CLID"
+#~ msgstr "CLID"
+
+#~ msgid "Destination"
+#~ msgstr "Destino"
+
+#~ msgid "Duration"
+#~ msgstr "Duração"
+
+#~ msgid "Bill"
+#~ msgstr "Projeto de lei"
+
+#~ msgid "Hangup cause"
+#~ msgstr "Motivo do desligamento"
+
+#~ msgid "Account"
+#~ msgstr "Conta"
+
+#~ msgid "All Switches"
+#~ msgstr "Todos os Switches"
+
+#~ msgid "All"
+#~ msgstr "Todos"
+
+#~ msgid "Caller ID"
+#~ msgstr "Caller ID"
+
+#~ msgid "Account Code"
+#~ msgstr "Código de conta"
+
+#, fuzzy
+#~ msgid "Duration (Secs)"
+#~ msgstr "Duração"
+
+#~ msgid "Switch"
+#~ msgstr "Servidor"
+
+#~ msgid "Country"
+#~ msgstr "País"
+
+#~ msgid "From"
+#~ msgstr "De"
+
+#~ msgid "To"
+#~ msgstr "Para"
+
+#~ msgid "Direction"
+#~ msgstr "Direção"
+
+#~ msgid "Inbound"
+#~ msgstr "Entrada"
+
+#~ msgid "Outbound"
+#~ msgstr "Saída"
+
+#~ msgid "Result"
+#~ msgstr "Resultado"
+
+#~ msgid "Minutes"
+#~ msgstr "Minutos"
+
+#~ msgid "Seconds"
+#~ msgstr "Segundos"
+
+#~ msgid "CDR per page"
+#~ msgstr "CDR por página"
+
+#~ msgid "Select date"
+#~ msgstr "Selecione a data"
+
+#~ msgid "Graph"
+#~ msgstr "Gráfico"
+
+#~ msgid "Calls per Hour"
+#~ msgstr "Ligações por hora"
+
+#~ msgid "Minutes per Hour"
+#~ msgstr "Minutos por hora"
+
+#~ msgid "Check with"
+#~ msgstr "Verifique com"
+
+#~ msgid "Previous days"
+#~ msgstr "Dias anteriores"
+
+#~ msgid "Same day of the week"
+#~ msgstr "Mesmo dia da semana"
+
+#, fuzzy
+#~ msgid "Email to send the report"
+#~ msgstr "Enviar e-mail para enviar alarme"
+
+#~ msgid "Upload CSV File "
+#~ msgstr "Enviar arquivo CSV"
+
+#~ msgid "Browse CSV file"
+#~ msgstr "Procurar arquivo CSV"
+
+#~ msgid "Document types accepted: %s"
+#~ msgstr "Tipos de documentos aceitos: %s"
+
+#~ msgid "Select switch"
+#~ msgstr "Selecionar switch"
+
+#~ msgid "Account code"
+#~ msgstr "Código da conta"
+
+#, fuzzy
+#~ msgid "caller_id_name"
+#~ msgstr "data da ligação"
+
+#, fuzzy
+#~ msgid "destination_number"
+#~ msgstr "Canal de destino"
+
+#, fuzzy
+#~ msgid "duration"
+#~ msgstr "Duração"
+
+#, fuzzy
+#~ msgid "hangup_cause_id"
+#~ msgstr "Hangupcause"
+
+#, fuzzy
+#~ msgid "direction"
+#~ msgstr "Direção"
+
+#, fuzzy
+#~ msgid "mduration"
+#~ msgstr "Duração"
+
+#, fuzzy
+#~ msgid "accountcode"
+#~ msgstr "Código de conta"
+
+#, fuzzy
+#~ msgid "Internal Calls"
+#~ msgstr "Total Chamadas"
+
+#~ msgid "ANSWER"
+#~ msgstr "ATENDIDA"
+
+#~ msgid "BUSY"
+#~ msgstr "OCUPADA"
+
+#~ msgid "NOANSWER"
+#~ msgstr "NÃO ATENDIDA"
+
+#~ msgid "CANCEL"
+#~ msgstr "CANCELADA"
+
+#~ msgid "CONGESTION"
+#~ msgstr "CONGESTIONADA"
+
+#~ msgid "CHANUNAVAIL"
+#~ msgstr "CANAL NÃO DISPONÍVEL"
+
+#~ msgid "DONTCALL"
+#~ msgstr "NÃO LIGA"
+
+#~ msgid "TORTURE"
+#~ msgstr "TORTURA"
+
+#~ msgid "INVALIDARGS"
+#~ msgstr "ARGUMENTOS INVÁLIDOS"
+
+#, fuzzy
+#~ msgid "Asterisk"
+#~ msgstr "Asterisk_CDR"
+
+#~ msgid "Switches"
+#~ msgstr "Switches"
+
+#~ msgid "Code"
+#~ msgstr "Código"
+
+#~ msgid "ITU-T Q.850 Code"
+#~ msgstr "ITU-T Q.850 Código"
+
+#~ msgid "Enumeration"
+#~ msgstr "Enumeração"
+
+#~ msgid "Cause"
+#~ msgstr "Causa"
+
+#~ msgid "Description"
+#~ msgstr "Descrição"
+
+#~ msgid "Hangupcause"
+#~ msgstr "Hangupcause"
+
+#~ msgid "Hangupcauses"
+#~ msgstr "Hangupcauses"
+
+#~ msgid "Mongodb Database connection is closed!"
+#~ msgstr "A conexão com o banco de dados Mongodb foi fechada!"
+
+#~ msgid "Mongodb Database is locked!"
+#~ msgstr "Banco de dados MongoDB esta bloqueado!"
+
+#~ msgid "Account code is not assigned!"
+#~ msgstr "Código de conta não esta atribuído!"
+
+#~ msgid "Email ids are saved successfully."
+#~ msgstr "Ids e-mail foram salvos com sucesso."
+
+#~ msgid "Successfully added prefix into blacklist"
+#~ msgstr "Prefixo adicionado com sucesso na lista negra"
+
+#~ msgid "Blacklist by country"
+#~ msgstr "Lista negra por país"
+
+#~ msgid "cdr_alert"
+#~ msgstr "cdr_alert"
+
+#~ msgid "Successfully added prefix into whitelist"
+#~ msgstr "Prefixo adicionado com sucesso na lista branca"
+
+#~ msgid "Whitelist by country"
+#~ msgstr "LIsta branca por país"
+
+#~ msgid "Day"
+#~ msgstr "dia"
+
+#~ msgid "Week"
+#~ msgstr "Semana"
+
+#~ msgid "Month"
+#~ msgstr "Mês"
+
+#~ msgid "Active"
+#~ msgstr "Ativo"
+
+#~ msgid "Inactive"
+#~ msgstr "Inativo"
+
+#~ msgid "ALOC (Average Length of Call)"
+#~ msgstr "Aloc (Duração médioa da chamada)"
+
+#~ msgid "ASR (Answer Seize Ratio)"
+#~ msgstr "ASR (Media de ligações atendidas)"
+
+#~ msgid "Is less than"
+#~ msgstr "É menor do que"
+
+#~ msgid "Is greater than"
+#~ msgstr "É maior do que"
+
+#~ msgid "Decrease by more than"
+#~ msgstr "Diminuir mais do que"
+
+#~ msgid "Increase by more than"
+#~ msgstr "Aumentar em mais de"
+
+#, fuzzy
+#~ msgid "Percentage decrease by more than"
+#~ msgstr "% diminuir mais do que"
+
+#, fuzzy
+#~ msgid "Percentage increase by more than"
+#~ msgstr "% aumentar mais do que"
+
+#~ msgid "Same day"
+#~ msgstr "Mesmo dia"
+
+#~ msgid "Same day in the previous week"
+#~ msgstr "Mesmo dia na semana anterior"
+
+#~ msgid "No alarm sent"
+#~ msgstr "Sem alarme enviado"
+
+#~ msgid "Alarm Sent"
+#~ msgstr "Alarme enviado"
+
+#~ msgid "Label"
+#~ msgstr "legenda"
+
+#~ msgid "Prefix"
+#~ msgstr "Prefixo"
+
+#~ msgid "Alert Remove Prefix"
+#~ msgstr "Alertar Remover Prefixo"
+
+#~ msgid "Alert Remove Prefixes"
+#~ msgstr "Alertar remover prefixos"
+
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid "Period"
+#~ msgstr "Período"
+
+#~ msgid "Interval to apply alarm"
+#~ msgstr "Intervalo para aplicar alarme"
+
+#~ msgid "Type"
+#~ msgstr "Tipo"
+
+#~ msgid ""
+#~ "ALOC (average length of call) ; ASR (answer seize ratio) ; CIC "
+#~ "(Consecutive Incomplete Calls) "
+#~ msgstr ""
+#~ "Aloc (duração média de chamada); ASR (resposta aproveitar ratio); CIC "
+#~ "(consecutivos Convida incompletos)"
+
+#~ msgid "Condition"
+#~ msgstr "Condição"
+
+#~ msgid "Value"
+#~ msgstr "Valor"
+
+#~ msgid "Input the value for the alert"
+#~ msgstr "O valor de entrada para o alerta do"
+
+#~ msgid "Status"
+#~ msgstr "Estado"
+
+#~ msgid "Email to send alarm"
+#~ msgstr "Enviar e-mail para enviar alarme"
+
+#~ msgid "Alarm"
+#~ msgstr "Alarme"
+
+#~ msgid "Alarms"
+#~ msgstr "Alarmes"
+
+#~ msgid "Select Alarm"
+#~ msgstr "Selecionar alarme"
+
+#~ msgid "Calculated value"
+#~ msgstr "Valor calculado"
+
+#~ msgid "Alarm Report"
+#~ msgstr "Relatório do alarme"
+
+#~ msgid "Alarms Report"
+#~ msgstr "Relatórios dos alarmes"
+
+#~ msgid "Select Country"
+#~ msgstr "Selecionar país"
+
+#~ msgid "Blacklist"
+#~ msgstr "Lista negra"
+
+#~ msgid "Whitelist"
+#~ msgstr "Whitelist"
+
+#~ msgid "Alert Message \"%(user)s\" - \"%(user_id)s\""
+#~ msgstr "Alerta de Mensagem \"%(user)s\" - \"%(user_id)s\""
+
+#~ msgid "CDR Report"
+#~ msgstr "Relatório do CDR"
+
+#~ msgid "Task Manager"
+#~ msgstr "Gerenciador de Tarefas"
+
+#~ msgid "Dashboard Stats"
+#~ msgstr "Estatísticas do Dashboard"
+
+#~ msgid "Recent Actions"
+#~ msgstr "Ações recentes"
+
+#~ msgid "CDR Voip"
+#~ msgstr "CDR Voip"
+
+#~ msgid "Country Dialcode"
+#~ msgstr "Dialcode País"
+
+#~ msgid "Quick links"
+#~ msgstr "Links rápidos"
+
+#~ msgid "Go to CDR-Stats.org"
+#~ msgstr "Ir para CDR-Stats.org"
+
+#~ msgid "Change password"
+#~ msgstr "Alterar senha"
+
+#~ msgid "Log out"
+#~ msgstr "Sair"
+
+#~ msgid "Latest CDR-Stats News"
+#~ msgstr "Últimas Notícias CDR-Stats"
+
+#~ msgid "CDR-Stats"
+#~ msgstr "CDR-Stats"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicações"
+
+#~ msgid "Administration"
+#~ msgstr "Administração"
+
+#~ msgid "Customer Panel"
+#~ msgstr "Painel do Cliente"
+
+#, fuzzy
+#~ msgid "Password:"
+#~ msgstr "senha"
+
+#~ msgid "Disabled Account"
+#~ msgstr "Conta desativada"
+
+#~ msgid "Invalid Login."
+#~ msgstr "Usuário inválido."
+
+#~ msgid "CDR-Stats : API Documentation"
+#~ msgstr "CDR-Stats: Documentação da API"
+
+#~ msgid "Accepted methods"
+#~ msgstr "Métodos aceitos"
+
+#~ msgid "CDR-Stats Admin"
+#~ msgstr "CDR-Stat Administração"
+
+#~ msgid " By %(filter_title)s "
+#~ msgstr "Por  %(filter_title)s "
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#~ msgid "Sample File"
+#~ msgstr "Arquivo de Amostra"
+
+#~ msgid "Submit"
+#~ msgstr "Submeter"
+
+#~ msgid "Reset"
+#~ msgstr "Redefinir"
+
+#~ msgid "Contact(s) imported"
+#~ msgstr "contato(s) importado(s)"
+
+#~ msgid "Contact(s) not imported"
+#~ msgstr "Contato (s) não importados"
+
+#~ msgid "Type mismatch"
+#~ msgstr "Incompatibilidade de tipo"
+
+#~ msgid "Select country"
+#~ msgstr "Selecione o país"
+
+#~ msgid "Select all prefixes"
+#~ msgstr "Selecione o prefixo"
+
+#~ msgid "Blacklist the selected prefixes"
+#~ msgstr "Lista negra dos prefixos selecionados"
+
+#~ msgid "Blacklist the selected country"
+#~ msgstr "Lista negra do país selecionado"
+
+#~ msgid "Add %(name)s"
+#~ msgstr "Adicionar %(name)s"
+
+#, fuzzy
+#~ msgid "Please correct the error below."
+#~ msgid_plural "Please correct the errors below."
+#~ msgstr[0] "Por favor, corrija o erro abaixo."
+#~ msgstr[1] "Por favor, corrija o erro abaixo."
+
+#~ msgid "CDR Alert"
+#~ msgstr "Alerta de CDR"
+
+#~ msgid "Add"
+#~ msgstr "Adicionar"
+
+#~ msgid "Change"
+#~ msgstr "Canal"
+
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
+
+#~ msgid "Search"
+#~ msgstr "Pesquisar"
+
+#~ msgid "Analytics"
+#~ msgstr "Analizar CDR"
+
+#~ msgid "Compare"
+#~ msgstr "Comparar"
+
+#~ msgid "Realtime"
+#~ msgstr "Em tempo real"
+
+#~ msgid "Concurrent"
+#~ msgstr "Concorrente"
+
+#~ msgid "Report"
+#~ msgstr "Relatório"
+
+#~ msgid "Country Report"
+#~ msgstr "Relatório do País"
+
+#, fuzzy
+#~ msgid "World Map Report"
+#~ msgstr "Relatório email"
+
+#~ msgid "Mail Report"
+#~ msgstr "Relatório email"
+
+#~ msgid "Account settings"
+#~ msgstr "Configurações da Conta"
+
+#~ msgid "Change Language"
+#~ msgstr "Alterar Idioma"
+
+#~ msgid "advanced search"
+#~ msgstr "pesquisa avançada"
+
+#~ msgid "secs"
+#~ msgstr "segs"
+
+#~ msgid "Calls"
+#~ msgstr "Chamadas"
+
+#, fuzzy
+#~ msgid "country call statistics"
+#~ msgstr "Estatísticas de chamadas por país"
+
+#, fuzzy
+#~ msgid "calls by country"
+#~ msgstr "Lista negra por país"
+
+#, fuzzy
+#~ msgid "top"
+#~ msgstr "para"
+
+#~ msgid "World"
+#~ msgstr "Mundo"
+
+#, fuzzy
+#~ msgid "world"
+#~ msgstr "Mundo"
+
+#~ msgid "Total"
+#~ msgstr "Total"
+
+#, fuzzy
+#~ msgid "Duration by Country"
+#~ msgstr "Duração"
+
+#, fuzzy
+#~ msgid "duration by country"
+#~ msgstr "Lista negra por país"
+
+#~ msgid "minutes"
+#~ msgstr "Minutos"
+
+#~ msgid "Call Statistics"
+#~ msgstr "Estatísticas de chamadas"
+
+#~ msgid "call totals report"
+#~ msgstr "Relatório total das ligações"
+
+#~ msgid "Total Calls"
+#~ msgstr "Total Chamadas"
+
+#~ msgid "Average Calls Per Hour"
+#~ msgstr "Chamadas por hora"
+
+#~ msgid "Total Duration"
+#~ msgstr "Duração Total"
+
+#, fuzzy
+#~ msgid "Average Call Duration"
+#~ msgstr "Tempo de duração media em minutos"
+
+#~ msgid "countries report"
+#~ msgstr "relatório de países"
+
+#~ msgid "5 most called countries"
+#~ msgstr "Os 5 países mais chamados"
+
+#~ msgid "No record found"
+#~ msgstr "Nenhum registro encontrado"
+
+#~ msgid "channel_data"
+#~ msgstr "Canal_dados"
+
+#~ msgid "callflow"
+#~ msgstr "callflow"
+
+#~ msgid "app_log"
+#~ msgstr "app_log"
+
+#~ msgid "variables"
+#~ msgstr "variáveis"
+
+#~ msgid "concurrent calls"
+#~ msgstr "chamadas simultâneas"
+
+#~ msgid "Concurrent Calls"
+#~ msgstr "Chamadas simultâneas"
+
+#~ msgid "CDR Mail Report"
+#~ msgstr "Relatório do CDR por email"
+
+#~ msgid "Save"
+#~ msgstr "Salvar"
+
+#~ msgid "Preview of the mail report"
+#~ msgstr "Pré-visualização do relatório e-mail"
+
+#~ msgid "Jan"
+#~ msgstr "Jan"
+
+#~ msgid "Feb"
+#~ msgstr "Fevereiro"
+
+#~ msgid "Mar"
+#~ msgstr "Estragar"
+
+#~ msgid "Apr"
+#~ msgstr "Abril"
+
+#~ msgid "May"
+#~ msgstr "Maio"
+
+#~ msgid "Jun"
+#~ msgstr "Junho"
+
+#~ msgid "Jul"
+#~ msgstr "Julho"
+
+#~ msgid "Aug"
+#~ msgstr "Agosto"
+
+#~ msgid "Sep"
+#~ msgstr "Setembro"
+
+#~ msgid "Oct"
+#~ msgstr "Outubro"
+
+#~ msgid "Nov"
+#~ msgstr "Novembro"
+
+#~ msgid "Dec"
+#~ msgstr "Dezembro"
+
+#~ msgid "January"
+#~ msgstr "Janeiro"
+
+#~ msgid "February"
+#~ msgstr "Fevereiro"
+
+#~ msgid "March"
+#~ msgstr "Março"
+
+#~ msgid "April"
+#~ msgstr "Abril"
+
+#~ msgid "June"
+#~ msgstr "Junho"
+
+#~ msgid "July"
+#~ msgstr "Julho"
+
+#~ msgid "August"
+#~ msgstr "Agosto"
+
+#~ msgid "September"
+#~ msgstr "Setembro"
+
+#~ msgid "October"
+#~ msgstr "Outubro"
+
+#~ msgid "November"
+#~ msgstr "Novembro"
+
+#~ msgid "December"
+#~ msgstr "Dezembro"
+
+#~ msgid "Hour"
+#~ msgstr "Origem"
+
+#~ msgid "Load by Hour"
+#~ msgstr "Carga por hora"
+
+#~ msgid "Load by Day"
+#~ msgstr "Carga por dia"
+
+#~ msgid "Load by Month"
+#~ msgstr "Carga por mês"
+
+#~ msgid "Points Off"
+#~ msgstr "Pontos Off"
+
+#~ msgid "Points On"
+#~ msgstr "Pontos em"
+
+#~ msgid "Count"
+#~ msgstr "Contar"
+
+#~ msgid "to"
+#~ msgstr "para"
+
+#~ msgid "with previous"
+#~ msgstr "com anterior"
+
+#~ msgid "days"
+#~ msgstr "dias"
+
+#~ msgid "CDR View"
+#~ msgstr "Ver CDR"
+
+#~ msgid "calls detail records"
+#~ msgstr "Registro de ligação detalhada"
+
+#~ msgid "report by day"
+#~ msgstr "relatório por dia"
+
+#~ msgid "Bill Seconds"
+#~ msgstr "Bilhetagem por segundo"
+
+#~ msgid "Authorized call"
+#~ msgstr "Chamada Autorizado"
+
+#~ msgid "Unauthorized call"
+#~ msgstr "Chamada não autorizada"
+
+#~ msgid "call"
+#~ msgstr "chamar"
+
+#~ msgid "Show details"
+#~ msgstr "Exibir detalhes"
+
+#~ msgid "Call Details"
+#~ msgstr "Detalhes das ligações"
+
+#~ msgid "Close"
+#~ msgstr "Fechar"
+
+#~ msgid "show rows"
+#~ msgstr "mostrar linhas"
+
+#~ msgid "total calls"
+#~ msgstr "Total de Chamadas"
+
+#~ msgid "Export CSV file"
+#~ msgstr "Exportar para um arquivo CSV"
+
+#~ msgid "daily report"
+#~ msgstr "Relatório diário"
+
+#~ msgid "Graphic"
+#~ msgstr "Gráfico"
+
+#~ msgid "Average Connection Time"
+#~ msgstr "Tempo médio de conexão"
+
+#~ msgid "ACT"
+#~ msgstr "ACT"
+
+#~ msgid "Confirm deletion?"
+#~ msgstr "Confirme a exclusão?"
+
+#~ msgid ""
+#~ "No data can be found in your collections, please make sure the import of "
+#~ "data is working correctly."
+#~ msgstr ""
+#~ "Não há dados podem ser encontrados em suas coleções, certifique-se a "
+#~ "importação de dados está funcionando corretamente."
+
+#~ msgid ""
+#~ "is an application that allows you to browse and analyse CDR (Call Detail "
+#~ "Records)."
+#~ msgstr ""
+#~ "é uma aplicação que permite que você navegue e analisar CDR (Call Detail "
+#~ "Records)."
+
+#~ msgid "Different reporting tools are provided :"
+#~ msgstr "Diferentes ferramentas de relatórios disponíveis:"
+
+#~ msgid "Search CDR: Search, filter, display and export CDR."
+#~ msgstr "Pesquisa CDR: Pesquise, filtro, visualizar e exportar CDR."
+
+#~ msgid ""
+#~ "Monthly Report: Summarise and compare call traffic history month on month."
+#~ msgstr ""
+#~ "Relatório Mensal: Resumir e compare chamada mês da história tráfego no "
+#~ "mês."
+
+#~ msgid ""
+#~ "Analyse CDR : Analyse and compare call volumes with the previous day’s "
+#~ "traffic."
+#~ msgstr ""
+#~ "Analisar CDR: Analisar e comparar os volumes de chamadas com o tráfego do "
+#~ "dia anterior."
+
+#~ msgid ""
+#~ "Daily Traffic : Graph and filter traffic loads by hour during the day."
+#~ msgstr ""
+#~ "Tráfego diário: Gráfico e cargas de tráfego filtro por hora durante o dia."
+
+#~ msgid "Learn more"
+#~ msgstr "Saiba mais"
+
+#~ msgid "Support"
+#~ msgstr "Suporte"
+
+#, fuzzy
+#~ msgid ""
+#~ "Star2Billing S.L. offers consultancy including installation, training and "
+#~ "customisation on CDR-Stats."
+#~ msgstr ""
+#~ "Star2Billing SL oferece consultoria, incluindo instalação, treinamento e "
+#~ "personalização em todos os seus produtos, e o CDR-Stas não é exceção."
+
+#~ msgid "Contact us at"
+#~ msgstr "Fale conosco"
+
+#~ msgid "for more information"
+#~ msgstr "para mais informacões"
+
+#~ msgid "Get Support"
+#~ msgstr "Solicitar suporte"
+
+#~ msgid "Licensing"
+#~ msgstr "Licensas"
+
+#~ msgid "CDR-Stats is licensed under"
+#~ msgstr "CDR-Stats está licenciado sobre"
+
+#~ msgid ""
+#~ "however an alternative license can be purchased if the MPL V2 license is "
+#~ "not suitable for your requirements."
+#~ msgstr ""
+#~ "no entanto uma licença alternativa pode ser comprada se a licença AGPL "
+#~ "não for adequada para suas necessidades."
+
+#~ msgid "View Licensing details"
+#~ msgstr "Ver detalhes de Licenciamento"
+
+#~ msgid "Logout"
+#~ msgstr "Sair"
+
+#~ msgid "Login"
+#~ msgstr "Logar"
+
+#~ msgid "CDR-Stats report of "
+#~ msgstr "CDR-Stats relatório de"
+
+#~ msgid "Last 10 Calls"
+#~ msgstr "10 últimas chamadas"
+
+#~ msgid "Clid"
+#~ msgstr "CLID"
+
+#~ msgid "Bill sec"
+#~ msgstr "Bill seg"
+
+#~ msgid "Calls Status"
+#~ msgstr "Estatísticas das ligações"
+
+#~ msgid "Customer Interface"
+#~ msgstr "Interface do Cliente"
+
+#~ msgid "Hide search"
+#~ msgstr "Ocultar pesquisa"
+
+#~ msgid "Please login by clicking on login button"
+#~ msgstr "Por favor, autentique-se clicando no botão Login"
+
+#~ msgid "Forgot password?"
+#~ msgstr "Esqueceu a senha?"
+
+#~ msgid "Display language"
+#~ msgstr "Mostrar linguagem"
+
+#, fuzzy
+#~ msgid "country calls detail"
+#~ msgstr "Estatísticas de chamadas por país"
+
+#, fuzzy
+#~ msgid "country list"
+#~ msgstr "Estatísticas de chamadas por país"
+
+#, fuzzy
+#~ msgid "World map Report"
+#~ msgstr "Relatório do alarme"
+
+#, fuzzy
+#~ msgid "CDR-Stats APIs"
+#~ msgstr "CDR-Stats"
+
+#, fuzzy
+#~ msgid "No"
+#~ msgstr "Novembro"
+
+#~ msgid "Password reset complete"
+#~ msgstr "Redefinição de senha completa"
+
+#~ msgid "Your password has been set.  You may go ahead and log in now."
+#~ msgstr ""
+#~ "Sua senha foi definida. Você pode ir em frente e faça o login agora."
+
+#~ msgid "Log in"
+#~ msgstr "Entrar"
+
+#~ msgid "Password reset"
+#~ msgstr "Reiniciar senha"
+
+#~ msgid "Enter new password"
+#~ msgstr "Digite a nova senha"
+
+#~ msgid "Please enter your new password twice for verification."
+#~ msgstr "Por favor, digite a nova senha duas vezes para verificação."
+
+#~ msgid "Change my password"
+#~ msgstr "Alterar minha senha"
+
+#~ msgid "Password reset unsuccessful"
+#~ msgstr "Redefinição de senha vencida"
+
+#~ msgid ""
+#~ "The password reset link was invalid, possibly because it has already been "
+#~ "used.  Please request a new password reset."
+#~ msgstr ""
+#~ "O link de redefinição de senha era inválido, possivelmente porque ele já "
+#~ "foi usado. Por favor, solicitar uma nova senha nova."
+
+#~ msgid "Password reset successful"
+#~ msgstr "Redefinição de senha bem-sucedido"
+
+#~ msgid ""
+#~ "We've e-mailed you instructions for setting your password to the e-mail "
+#~ "address you submitted. You should be receiving it shortly."
+#~ msgstr ""
+#~ "Nós e-mail instruções para configurar a senha para o endereço de e-mail "
+#~ "que você enviou. Você deve estar recebendo-lo em breve."
+
+#~ msgid ""
+#~ "You're receiving this e-mail because you requested a password reset for "
+#~ "your user account at %(site_name)s."
+#~ msgstr ""
+#~ "Você está recebendo este e-mail porque você pediu uma redefinição de "
+#~ "senha para sua conta de usuário em %(site_name)s."
+
+#~ msgid "Please go to the following page and choose a new password:"
+#~ msgstr "Por favor, vá para a página seguinte e escolher uma nova senha:"
+
+#~ msgid "Your username, in case you've forgotten:"
+#~ msgstr "Seu nome de usuário, caso você tenha esquecido:"
+
+#~ msgid "The %(site_name)s team"
+#~ msgstr "O %(site_name)s, a equipe de"
+
+#~ msgid "Forgotten your password?"
+#~ msgstr "Esqueceu sua senha?"
+
+#~ msgid ""
+#~ "Enter your e-mail address below, and we'll e-mail instructions for "
+#~ "setting a new one."
+#~ msgstr ""
+#~ "Digite seu endereço de e-mail, e nós vamos e-mail instruções para "
+#~ "configurar um novo."
+
+#~ msgid "Reset my password"
+#~ msgstr "Redefinir minha senha"
+
+#, fuzzy
+#~ msgid "Change detail"
+#~ msgstr "Exibir detalhes"
+
+#~ msgid "Settings"
+#~ msgstr "Configurações"
+
+#~ msgid "User detail, Password and notifications"
+#~ msgstr "Detalhe usuário, senha e notificações"
+
+#~ msgid "Password"
+#~ msgstr "senha"
+
+#~ msgid "Change language "
+#~ msgstr "Alterar idioma"
+
+#~ msgid "Select language"
+#~ msgstr "Selecionar idioma"
+
+#~ msgid "Previous"
+#~ msgstr "Anterior"
+
+#~ msgid "Next"
+#~ msgstr "Próximo"
+
+#~ msgid "Thank you for using CDR-Stats."
+#~ msgstr "Obrigado por utilizar o CDR-Stats."
+
+#~ msgid "Log in again"
+#~ msgstr "Login novamente"
+
+#~ msgid "Personal info"
+#~ msgstr "Informações pessoais"
+
+#~ msgid "Permission"
+#~ msgstr "Permissão"
+
+#~ msgid "Important dates"
+#~ msgstr "Datas importantes"
+
+#~ msgid "Notifications are successfully marked as read."
+#~ msgstr "As notificações são sucesso marcada como lida."
+
+#~ msgid "Notifications are not marked as read."
+#~ msgstr "As notificações não são marcadas como lidas."
+
+#~ msgid "Mark notification as seen"
+#~ msgstr "Marcar notificação como visto"
+
+#, fuzzy
+#~ msgid "average length of call"
+#~ msgstr "Duração média da chamada"
+
+#, fuzzy
+#~ msgid "answer seize ratio"
+#~ msgstr "Resposta Aproveite Relação"
+
+#, fuzzy
+#~ msgid "blacklist prefix"
+#~ msgstr "Lista negra Prefixo"
+
+#, fuzzy
+#~ msgid "whitelist prefix"
+#~ msgstr "Prefixo Whitelist"
+
+#~ msgid "Afar"
+#~ msgstr "Longe"
+
+#~ msgid "Abkhazian"
+#~ msgstr "Abcásia"
+
+#~ msgid "Afrikaans"
+#~ msgstr "Afrikaans"
+
+#~ msgid "Akan"
+#~ msgstr "Akan"
+
+#~ msgid "Albanian"
+#~ msgstr "Albanês"
+
+#~ msgid "Amharic"
+#~ msgstr "Amárico"
+
+#~ msgid "Arabic"
+#~ msgstr "Árabe"
+
+#~ msgid "Aragonese"
+#~ msgstr "Aragonês"
+
+#~ msgid "Armenian"
+#~ msgstr "Armênio"
+
+#~ msgid "Assamese"
+#~ msgstr "Assamese"
+
+#~ msgid "Avaric"
+#~ msgstr "Avaric"
+
+#~ msgid "Avestan"
+#~ msgstr "Avestan"
+
+#~ msgid "Aymara"
+#~ msgstr "Aymara"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "Azerbaijano"
+
+#~ msgid "Bashkir"
+#~ msgstr "Bashkir"
+
+#~ msgid "Bambara"
+#~ msgstr "Bambara"
+
+#~ msgid "Basque"
+#~ msgstr "Basco"
+
+#~ msgid "Belarusian"
+#~ msgstr "Bielorrusso"
+
+#~ msgid "Bengali"
+#~ msgstr "Bengali"
+
+#~ msgid "Bihari languages"
+#~ msgstr "Línguas Bihari"
+
+#~ msgid "Bislama"
+#~ msgstr "Bislama"
+
+#~ msgid "Tibetan"
+#~ msgstr "Tibetano"
+
+#~ msgid "Bosnian"
+#~ msgstr "Bósnio"
+
+#~ msgid "Breton"
+#~ msgstr "Breton"
+
+#~ msgid "Bulgarian"
+#~ msgstr "Búlgaro"
+
+#~ msgid "Burmese"
+#~ msgstr "Birmanês"
+
+#~ msgid "Catalan; Valencian"
+#~ msgstr "Catalão; Valenciana"
+
+#~ msgid "Czech"
+#~ msgstr "Tcheco"
+
+#~ msgid "Chamorro"
+#~ msgstr "Chamorro"
+
+#~ msgid "Chechen"
+#~ msgstr "Checheno"
+
+#~ msgid "Chinese"
+#~ msgstr "Chinês"
+
+#~ msgid ""
+#~ "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church "
+#~ "Slavonic"
+#~ msgstr ""
+#~ "Igreja eslava; eslavo; Igreja eslava; Antigo búlgaro; Igreja Velha eslava"
+
+#~ msgid "Chuvash"
+#~ msgstr "Chuvash"
+
+#~ msgid "Cornish"
+#~ msgstr "Cornish"
+
+#~ msgid "Corsican"
+#~ msgstr "Corso"
+
+#~ msgid "Cree"
+#~ msgstr "Cree"
+
+#~ msgid "Welsh"
+#~ msgstr "Galês"
+
+#~ msgid "Danish"
+#~ msgstr "Dinamarquês"
+
+#~ msgid "Divehi; Dhivehi; Maldivian"
+#~ msgstr "Divehi; Dhivehi; Maldivian"
+
+#~ msgid "Dutch; Flemish"
+#~ msgstr "Holandês; Flamengo"
+
+#~ msgid "Dzongkha"
+#~ msgstr "Dzongkha"
+
+#~ msgid "Greek, Modern (1453-)"
+#~ msgstr "Grego, Moderno (1453 -)"
+
+#~ msgid "Esperanto"
+#~ msgstr "Esperanto"
+
+#~ msgid "Estonian"
+#~ msgstr "Estoniano"
+
+#~ msgid "Ewe"
+#~ msgstr "Ovelha"
+
+#~ msgid "Faroese"
+#~ msgstr "Das Ilhas Faroé"
+
+#~ msgid "Persian"
+#~ msgstr "Persa"
+
+#~ msgid "Fijian"
+#~ msgstr "Fiji"
+
+#~ msgid "Finnish"
+#~ msgstr "Finlandês"
+
+#~ msgid "Western Frisian"
+#~ msgstr "Ocidental Frisian"
+
+#~ msgid "Fulah"
+#~ msgstr "Fulah"
+
+#~ msgid "Georgian"
+#~ msgstr "Georgiano"
+
+#~ msgid "Gaelic; Scottish Gaelic"
+#~ msgstr "Gaélico; gaélico escocês"
+
+#~ msgid "Irish"
+#~ msgstr "Irlandês"
+
+#~ msgid "Galician"
+#~ msgstr "Galego"
+
+#~ msgid "Manx"
+#~ msgstr "Manx"
+
+#~ msgid "Guarani"
+#~ msgstr "Guarani"
+
+#~ msgid "Gujarati"
+#~ msgstr "Guzerate"
+
+#~ msgid "Haitian; Haitian Creole"
+#~ msgstr "Haiti; crioulo haitiano"
+
+#~ msgid "Hausa"
+#~ msgstr "Hausa"
+
+#~ msgid "Hebrew"
+#~ msgstr "Hebraico"
+
+#~ msgid "Herero"
+#~ msgstr "Herero"
+
+#~ msgid "Hindi"
+#~ msgstr "Hindi"
+
+#~ msgid "Hiri Motu"
+#~ msgstr "Hiri Motu"
+
+#~ msgid "Croatian"
+#~ msgstr "Croata"
+
+#~ msgid "Hungarian"
+#~ msgstr "Húngaro"
+
+#~ msgid "Igbo"
+#~ msgstr "Ibo"
+
+#~ msgid "Icelandic"
+#~ msgstr "Islandês"
+
+#~ msgid "Ido"
+#~ msgstr "Ido"
+
+#~ msgid "Sichuan Yi; Nuosu"
+#~ msgstr "Sichuan Yi; Nuosu"
+
+#~ msgid "Inuktitut"
+#~ msgstr "Inuktitut"
+
+#~ msgid "Interlingue; Occidental"
+#~ msgstr "Interlingue; Occidental"
+
+#~ msgid "Interlingua (International Auxiliary Language Association)"
+#~ msgstr "Interlíngua (International Auxiliary Language Association)"
+
+#~ msgid "Indonesian"
+#~ msgstr "Indonésio"
+
+#~ msgid "Inupiaq"
+#~ msgstr "Inupiaq"
+
+#~ msgid "Italian"
+#~ msgstr "Italiano"
+
+#~ msgid "Javanese"
+#~ msgstr "Javanês"
+
+#~ msgid "Japanese"
+#~ msgstr "Japonês"
+
+#~ msgid "Kalaallisut; Greenlandic"
+#~ msgstr "Kalaallisut; da Gronelândia"
+
+#~ msgid "Kannada"
+#~ msgstr "Canará"
+
+#~ msgid "Kashmiri"
+#~ msgstr "Kashmiri"
+
+#~ msgid "Kanuri"
+#~ msgstr "Kanuri"
+
+#~ msgid "Kazakh"
+#~ msgstr "Cazaque"
+
+#~ msgid "Central Khmer"
+#~ msgstr "Central Khmer"
+
+#~ msgid "Kikuyu; Gikuyu"
+#~ msgstr "Kikuyu; Gikuyu"
+
+#~ msgid "Kinyarwanda"
+#~ msgstr "Kinyarwanda"
+
+#~ msgid "Kirghiz; Kyrgyz"
+#~ msgstr "Kirghiz; do Quirguistão"
+
+#~ msgid "Komi"
+#~ msgstr "Komi"
+
+#~ msgid "Kongo"
+#~ msgstr "Kongo"
+
+#~ msgid "Korean"
+#~ msgstr "Coreano"
+
+#~ msgid "Kuanyama; Kwanyama"
+#~ msgstr "Kuanyama; Kwanyama"
+
+#~ msgid "Kurdish"
+#~ msgstr "Curdo"
+
+#~ msgid "Lao"
+#~ msgstr "Lao"
+
+#~ msgid "Latin"
+#~ msgstr "Latino"
+
+#~ msgid "Latvian"
+#~ msgstr "Letão"
+
+#~ msgid "Limburgan; Limburger; Limburgish"
+#~ msgstr "Limburgan; Limburger; Limburguês"
+
+#~ msgid "Lingala"
+#~ msgstr "Lingala"
+
+#~ msgid "Lithuanian"
+#~ msgstr "Lituano"
+
+#~ msgid "Luxembourgish; Letzeburgesch"
+#~ msgstr "Luxemburguesa; luxemburguês"
+
+#~ msgid "Luba-Katanga"
+#~ msgstr "Luba-Katanga"
+
+#~ msgid "Ganda"
+#~ msgstr "Ganda"
+
+#~ msgid "Macedonian"
+#~ msgstr "Macedônio"
+
+#~ msgid "Marshallese"
+#~ msgstr "Marshallese"
+
+#~ msgid "Malayalam"
+#~ msgstr "Malayalam"
+
+#~ msgid "Maori"
+#~ msgstr "Maori"
+
+#~ msgid "Marathi"
+#~ msgstr "Marathi"
+
+#~ msgid "Malay"
+#~ msgstr "Malaio"
+
+#~ msgid "Malagasy"
+#~ msgstr "Malgaxe"
+
+#~ msgid "Maltese"
+#~ msgstr "Maltês"
+
+#~ msgid "Mongolian"
+#~ msgstr "Mongol"
+
+#~ msgid "Nauru"
+#~ msgstr "Nauru"
+
+#~ msgid "Navajo; Navaho"
+#~ msgstr "Navajo; Navaho"
+
+#~ msgid "Ndebele, South; South Ndebele"
+#~ msgstr "Ndebele, Sul, Sul Ndebele"
+
+#~ msgid "Ndebele, North; North Ndebele"
+#~ msgstr "Ndebele, Norte, Norte Ndebele"
+
+#~ msgid "Ndonga"
+#~ msgstr "Ndonga"
+
+#~ msgid "Nepali"
+#~ msgstr "Nepali"
+
+#~ msgid "Norwegian Nynorsk; Nynorsk, Norwegian"
+#~ msgstr "Norwegian Nynorsk, Nynorsk, norueguês"
+
+#~ msgid "Bokmal, Norwegian; Norwegian Bokmal"
+#~ msgstr "Bokmal, norueguês, norueguês Bokmal"
+
+#~ msgid "Norwegian"
+#~ msgstr "Norueguês"
+
+#~ msgid "Chichewa; Chewa; Nyanja"
+#~ msgstr "Chichewa; Chewa; Nyanja"
+
+#~ msgid "Occitan (post 1500)"
+#~ msgstr "Occitano (pós 1500)"
+
+#~ msgid "Ojibwa"
+#~ msgstr "Ojibwa"
+
+#~ msgid "Oriya"
+#~ msgstr "Oriya"
+
+#~ msgid "Oromo"
+#~ msgstr "Oromo"
+
+#~ msgid "Ossetian; Ossetic"
+#~ msgstr "Ossétia; osseto"
+
+#~ msgid "Panjabi; Punjabi"
+#~ msgstr "Panjabi; Punjabi"
+
+#~ msgid "Pali"
+#~ msgstr "Páli"
+
+#~ msgid "Polish"
+#~ msgstr "Polonês"
+
+#~ msgid "Pushto; Pashto"
+#~ msgstr "Pushto; Pashto"
+
+#~ msgid "Quechua"
+#~ msgstr "Quechua"
+
+#~ msgid "Romansh"
+#~ msgstr "Romanche"
+
+#~ msgid "Romanian; Moldavian; Moldovan"
+#~ msgstr "Romeno; moldava; moldavo"
+
+#~ msgid "Rundi"
+#~ msgstr "Rundi"
+
+#~ msgid "Sango"
+#~ msgstr "Sango"
+
+#~ msgid "Sanskrit"
+#~ msgstr "Sânscrito"
+
+#~ msgid "Sinhala; Sinhalese"
+#~ msgstr "Sinhala; cingalês"
+
+#~ msgid "Slovak"
+#~ msgstr "Eslovaco"
+
+#~ msgid "Slovenian"
+#~ msgstr "Esloveno"
+
+#~ msgid "Northern Sami"
+#~ msgstr "Sami do Norte"
+
+#~ msgid "Samoan"
+#~ msgstr "Samoan"
+
+#~ msgid "Shona"
+#~ msgstr "Shona"
+
+#~ msgid "Sindhi"
+#~ msgstr "Sindhi"
+
+#~ msgid "Somali"
+#~ msgstr "Somália"
+
+#~ msgid "Sotho, Southern"
+#~ msgstr "Sotho, Southern"
+
+#~ msgid "Spanish; Castilian"
+#~ msgstr "Espanhol; castelhano"
+
+#~ msgid "Sardinian"
+#~ msgstr "Sardo"
+
+#~ msgid "Serbian"
+#~ msgstr "Sérvio"
+
+#~ msgid "Swati"
+#~ msgstr "Swati"
+
+#~ msgid "Sundanese"
+#~ msgstr "Sundanese"
+
+#~ msgid "Swahili"
+#~ msgstr "Suaíli"
+
+#~ msgid "Swedish"
+#~ msgstr "Sueco"
+
+#~ msgid "Tahitian"
+#~ msgstr "Tahitian"
+
+#~ msgid "Tamil"
+#~ msgstr "Tâmil"
+
+#~ msgid "Tatar"
+#~ msgstr "Tatar"
+
+#~ msgid "Telugu"
+#~ msgstr "Telugu"
+
+#~ msgid "Tajik"
+#~ msgstr "Tajik"
+
+#~ msgid "Tagalog"
+#~ msgstr "Tagalog"
+
+#~ msgid "Thai"
+#~ msgstr "Tailandês"
+
+#~ msgid "Tigrinya"
+#~ msgstr "Tigrinya"
+
+#~ msgid "Tonga (Tonga Islands)"
+#~ msgstr "Tonga (Tonga Islands)"
+
+#~ msgid "Tswana"
+#~ msgstr "Tswana"
+
+#~ msgid "Tsonga"
+#~ msgstr "Tsonga"
+
+#~ msgid "Turkmen"
+#~ msgstr "Turkmen"
+
+#~ msgid "Turkish"
+#~ msgstr "Turco"
+
+#~ msgid "Twi"
+#~ msgstr "Twi"
+
+#~ msgid "Uighur; Uyghur"
+#~ msgstr "Uigur; Uyghur"
+
+#~ msgid "Ukrainian"
+#~ msgstr "Ucraniano"
+
+#~ msgid "Urdu"
+#~ msgstr "Urdu"
+
+#~ msgid "Uzbek"
+#~ msgstr "Usbeque"
+
+#~ msgid "Venda"
+#~ msgstr "Venda"
+
+#~ msgid "Vietnamese"
+#~ msgstr "Vietnamita"
+
+#~ msgid "Volapuk"
+#~ msgstr "Volapuk"
+
+#~ msgid "Walloon"
+#~ msgstr "Valão"
+
+#~ msgid "Wolof"
+#~ msgstr "Wolof"
+
+#~ msgid "Xhosa"
+#~ msgstr "Xhosa"
+
+#~ msgid "Yiddish"
+#~ msgstr "Ídiche"
+
+#~ msgid "Yoruba"
+#~ msgstr "Iorubá"
+
+#~ msgid "Zhuang; Chuang"
+#~ msgstr "Zhuang; Chuang"
+
+#~ msgid "Zulu"
+#~ msgstr "Zulu"
+
+#~ msgid "Stores language codes"
+#~ msgstr "Linguagem códigos lojas"
+
+#~ msgid "Email address"
+#~ msgstr "Endereço de email"
+
+#~ msgid "Average Length of Call"
+#~ msgstr "Duração média da chamada"
+
+#~ msgid "Answer Seize Ratio"
+#~ msgstr "Resposta Aproveite Relação"
+
+#~ msgid "Blacklist Prefix"
+#~ msgstr "Lista negra Prefixo"
+
+#~ msgid "Whitelist Prefix"
+#~ msgstr "Prefixo Whitelist"
+
+#~ msgid "Address"
+#~ msgstr "Endereço"
+
+#~ msgid "City"
+#~ msgstr "Cidade"
+
+#~ msgid "State"
+#~ msgstr "Estado"
+
+#~ msgid "Zip code"
+#~ msgstr "CEP"
+
+#~ msgid "Phone number"
+#~ msgstr "Número de telefone"
+
+#~ msgid "Fax Number"
+#~ msgstr "Fax"
+
+#~ msgid "Company name"
+#~ msgstr "Nome da empresa"
+
+#~ msgid "Company website"
+#~ msgstr "Site da empresa"
+
+#~ msgid "Language"
+#~ msgstr "Linguagem"
+
+#~ msgid "Note"
+#~ msgstr "Nota"
+
+#~ msgid "Report mail list"
+#~ msgstr "Relatório lista de e-mail"
+
+#~ msgid "Enter a valid e-mail address separated by commas."
+#~ msgstr "Insira um endereço de e-mail válido separados por vírgulas."
+
+#, fuzzy
+#~ msgid "Can view CDR detail"
+#~ msgstr "Exibir detalhes"
+
+#, fuzzy
+#~ msgid "Can view CDR concurrent calls"
+#~ msgstr "chamadas simultâneas"
+
+#, fuzzy
+#~ msgid "Can view CDR mail report"
+#~ msgstr "Pré-visualização do relatório e-mail"
+
+#, fuzzy
+#~ msgid "Can view CDR country report"
+#~ msgstr "Relatório do País"
+
+#~ msgid "User Profile"
+#~ msgstr "Perfil de Usuário"
+
+#~ msgid "Customer"
+#~ msgstr "Cliente"
+
+#~ msgid "Customers"
+#~ msgstr "Os clientes"
+
+#~ msgid "Admin"
+#~ msgstr "Administrador"
+
+#~ msgid "Admins"
+#~ msgstr "Admins"
+
+#~ msgid "Detail has been changed."
+#~ msgstr "Detalhe foi alterado."
+
+#~ msgid "Please correct the errors below."
+#~ msgstr "Por favor, corrija os erros abaixo."
+
+#~ msgid "Your password has been changed."
+#~ msgstr "Sua senha foi alterada."

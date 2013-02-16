@@ -1,0 +1,108 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-16 15:54+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: constants.py:6
+msgid "Message"
+msgstr ""
+
+#: constants.py:7
+msgid "Notice type"
+msgstr ""
+
+#: constants.py:8
+msgid "Sender"
+msgstr ""
+
+#: constants.py:9
+msgid "Date"
+msgstr ""
+
+#: views.py:122
+msgid "All notifications are marked as read."
+msgstr ""
+
+#: views.py:157
+#, python-format
+msgid "\"%(name)s\" is deleted."
+msgstr ""
+
+#: views.py:161
+#, python-format
+msgid "\"%(name)s\" is marked as read."
+msgstr ""
+
+#: views.py:175
+#, python-format
+msgid "%(count)s notification(s) are deleted."
+msgstr ""
+
+#: views.py:180
+#, python-format
+msgid "%(count)s notification(s) are marked as read."
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:21
+msgid "You must check at least one box!"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:29
+msgid " notification(s) are going to be deleted?"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:32
+msgid " notification(s) are going to be marked as read?"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:51
+msgid "Notifications"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:57
+msgid "Alert"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:63
+#: templates/frontend/frontend_notification/user_notification.html:89
+msgid "Action"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:68
+msgid "Mark as read"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:69
+msgid "Delete notifications"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:72
+msgid "Mark all as read"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:111
+msgid "no records found"
+msgstr ""
+
+#: templatetags/frontend_notification_tags.py:24
+msgid "New"
+msgstr ""
+
+#: templatetags/frontend_notification_tags.py:26
+msgid "Read"
+msgstr ""

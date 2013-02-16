@@ -1,0 +1,500 @@
+# CDR-Stats - PO File
+# Copyright (C) 2010 - Star2Billing S.L.
+# This file is distributed under the same license as the CDR-Stats application.
+# Areski Belaid <areski@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CDR-Stats 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-16 15:55+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Areski Belaid <areski@gmail.com>\n"
+"Language-Team: Areski Belaid <areski@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: constants.py:6
+msgid "Message"
+msgstr ""
+
+#: constants.py:7
+msgid "Notice type"
+msgstr ""
+
+#: constants.py:8
+msgid "Sender"
+msgstr ""
+
+#: constants.py:9
+msgid "Date"
+msgstr "Fecha"
+
+#: views.py:122
+msgid "All notifications are marked as read."
+msgstr ""
+
+#: views.py:157
+#, python-format
+msgid "\"%(name)s\" is deleted."
+msgstr ""
+
+#: views.py:161
+#, python-format
+msgid "\"%(name)s\" is marked as read."
+msgstr ""
+
+#: views.py:175
+#, python-format
+msgid "%(count)s notification(s) are deleted."
+msgstr ""
+
+#: views.py:180
+#, python-format
+msgid "%(count)s notification(s) are marked as read."
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:21
+msgid "You must check at least one box!"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:29
+msgid " notification(s) are going to be deleted?"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:32
+msgid " notification(s) are going to be marked as read?"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:51
+msgid "Notifications"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:57
+msgid "Alert"
+msgstr "Alerta"
+
+#: templates/frontend/frontend_notification/user_notification.html:63
+#: templates/frontend/frontend_notification/user_notification.html:89
+msgid "Action"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:68
+msgid "Mark as read"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:69
+msgid "Delete notifications"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:72
+msgid "Mark all as read"
+msgstr ""
+
+#: templates/frontend/frontend_notification/user_notification.html:111
+msgid "no records found"
+msgstr ""
+
+#: templatetags/frontend_notification_tags.py:24
+#, fuzzy
+msgid "New"
+msgstr "Noticias"
+
+#: templatetags/frontend_notification_tags.py:26
+msgid "Read"
+msgstr ""
+
+#~ msgid "English"
+#~ msgstr "Inglés"
+
+#~ msgid "French"
+#~ msgstr "Francés"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"
+
+#~ msgid "Equals"
+#~ msgstr "Igual a"
+
+#, fuzzy
+#~ msgid "Begins"
+#~ msgstr "Comienza con"
+
+#~ msgid "Contains"
+#~ msgstr "Contiene"
+
+#, fuzzy
+#~ msgid "Ends"
+#~ msgstr "Termina con"
+
+#, fuzzy
+#~ msgid "Call-date"
+#~ msgstr "Fecha de Llamada"
+
+#~ msgid "Destination"
+#~ msgstr "Destino"
+
+#~ msgid "Duration"
+#~ msgstr "Duración"
+
+#, fuzzy
+#~ msgid "Account"
+#~ msgstr "Cuenta desactivada"
+
+#, fuzzy
+#~ msgid "Caller ID"
+#~ msgstr "Fecha de Llamada"
+
+#, fuzzy
+#~ msgid "Duration (Secs)"
+#~ msgstr "Duración :"
+
+#~ msgid "From"
+#~ msgstr "De"
+
+#~ msgid "To"
+#~ msgstr "Para"
+
+#, fuzzy
+#~ msgid "Direction"
+#~ msgstr "Duración"
+
+#~ msgid "Result"
+#~ msgstr "Resultados"
+
+#~ msgid "Minutes"
+#~ msgstr "Minutos"
+
+#~ msgid "Seconds"
+#~ msgstr "Segundos"
+
+#~ msgid "Select date"
+#~ msgstr "Seleccione la fecha"
+
+#~ msgid "Graph"
+#~ msgstr "Gráfico"
+
+#~ msgid "Calls per Hour"
+#~ msgstr "Llamada por hora"
+
+#~ msgid "Minutes per Hour"
+#~ msgstr "Minutos por hora"
+
+#, fuzzy
+#~ msgid "Email to send the report"
+#~ msgstr "Detalles de Llamadas por día"
+
+#, fuzzy
+#~ msgid "Upload CSV File "
+#~ msgstr "Exportar en un archivo CSV"
+
+#, fuzzy
+#~ msgid "Browse CSV file"
+#~ msgstr "Exportar en un archivo CSV"
+
+#, fuzzy
+#~ msgid "Select switch"
+#~ msgstr "Seleccione la fecha"
+
+#, fuzzy
+#~ msgid "destination_number"
+#~ msgstr "Destino"
+
+#, fuzzy
+#~ msgid "duration"
+#~ msgstr "Duración"
+
+#, fuzzy
+#~ msgid "mduration"
+#~ msgstr "Duración"
+
+#, fuzzy
+#~ msgid "Internal Calls"
+#~ msgstr "Total Llamadas"
+
+#~ msgid "ANSWER"
+#~ msgstr "ANSWER"
+
+#~ msgid "BUSY"
+#~ msgstr "BUSY"
+
+#~ msgid "NOANSWER"
+#~ msgstr "NOANSWER"
+
+#~ msgid "CANCEL"
+#~ msgstr "CANCEL"
+
+#~ msgid "CONGESTION"
+#~ msgstr "CONGESTION"
+
+#~ msgid "CHANUNAVAIL"
+#~ msgstr "CHANUNAVAIL"
+
+#~ msgid "DONTCALL"
+#~ msgstr "DONTCALL"
+
+#~ msgid "TORTURE"
+#~ msgstr "TORTURE"
+
+#~ msgid "INVALIDARGS"
+#~ msgstr "INVALIDARGS"
+
+#, fuzzy
+#~ msgid "Enumeration"
+#~ msgstr "Duración"
+
+#, fuzzy
+#~ msgid "Description"
+#~ msgstr "Destino"
+
+#~ msgid "Day"
+#~ msgstr "día"
+
+#, fuzzy
+#~ msgid "Month"
+#~ msgstr "mes"
+
+#, fuzzy
+#~ msgid "Condition"
+#~ msgstr "Disposición"
+
+#, fuzzy
+#~ msgid "Select Alarm"
+#~ msgstr "Seleccione la fecha"
+
+#, fuzzy
+#~ msgid "Select Country"
+#~ msgstr "Seleccione la fecha"
+
+#, fuzzy
+#~ msgid "Change password"
+#~ msgstr "Pontraseña"
+
+#, fuzzy
+#~ msgid "Password:"
+#~ msgstr "Pontraseña"
+
+#~ msgid "Disabled Account"
+#~ msgstr "Cuenta desactivada"
+
+#~ msgid "Invalid Login."
+#~ msgstr "Nombre de usuario invalid."
+
+#, fuzzy
+#~ msgid "Contact(s) imported"
+#~ msgstr "Contacte con nosotros en"
+
+#, fuzzy
+#~ msgid "Select country"
+#~ msgstr "Seleccione la fecha"
+
+#, fuzzy
+#~ msgid "Select all prefixes"
+#~ msgstr "Seleccione la fecha"
+
+#, fuzzy
+#~ msgid "CDR Alert"
+#~ msgstr "Alerta"
+
+#~ msgid "Change"
+#~ msgstr "Cambio"
+
+#~ msgid "Search"
+#~ msgstr "Búsqueda"
+
+#, fuzzy
+#~ msgid "Analytics"
+#~ msgstr "Analizar CDR"
+
+#, fuzzy
+#~ msgid "Report"
+#~ msgstr "Apoyo"
+
+#, fuzzy
+#~ msgid "calls by country"
+#~ msgstr "Seleccione la fecha"
+
+#~ msgid "Total"
+#~ msgstr "Total"
+
+#, fuzzy
+#~ msgid "Duration by Country"
+#~ msgstr "Duración :"
+
+#, fuzzy
+#~ msgid "minutes"
+#~ msgstr "Minutos"
+
+#, fuzzy
+#~ msgid "call totals report"
+#~ msgstr "Detalles de Llamadas por día"
+
+#~ msgid "Total Calls"
+#~ msgstr "Total Llamadas"
+
+#~ msgid "Average Calls Per Hour"
+#~ msgstr "Llamada por hora"
+
+#, fuzzy
+#~ msgid "Total Duration"
+#~ msgstr "Duración"
+
+#, fuzzy
+#~ msgid "Average Call Duration"
+#~ msgstr "Llamada por hora"
+
+#, fuzzy
+#~ msgid "channel_data"
+#~ msgstr "Channel"
+
+#, fuzzy
+#~ msgid "CDR Mail Report"
+#~ msgstr "Detalles de Llamadas por día"
+
+#~ msgid "May"
+#~ msgstr "Mayo"
+
+#~ msgid "March"
+#~ msgstr "Búsqueda"
+
+#~ msgid "Hour"
+#~ msgstr "Hora"
+
+#~ msgid "Load by Hour"
+#~ msgstr "Carga por hora"
+
+#, fuzzy
+#~ msgid "Load by Day"
+#~ msgstr "Carga por hora"
+
+#, fuzzy
+#~ msgid "Load by Month"
+#~ msgstr "Carga por hora"
+
+#~ msgid "days"
+#~ msgstr "días"
+
+#, fuzzy
+#~ msgid "calls detail records"
+#~ msgstr "Detalles de las llamadas "
+
+#, fuzzy
+#~ msgid "Bill Seconds"
+#~ msgstr "Segundos"
+
+#, fuzzy
+#~ msgid "Show details"
+#~ msgstr "para más detalles."
+
+#, fuzzy
+#~ msgid "Call Details"
+#~ msgstr "Detalles de las llamadas "
+
+#, fuzzy
+#~ msgid "total calls"
+#~ msgstr "Total Llamadas"
+
+#~ msgid "Export CSV file"
+#~ msgstr "Exportar en un archivo CSV"
+
+#~ msgid "Graphic"
+#~ msgstr "Gráfico"
+
+#~ msgid "Average Connection Time"
+#~ msgstr "Promedio del Tiempo de Conexión"
+
+#~ msgid "ACT"
+#~ msgstr "PTC"
+
+#~ msgid ""
+#~ "is an application that allows you to browse and analyse CDR (Call Detail "
+#~ "Records)."
+#~ msgstr ""
+#~ "es una aplicación de código abierto que le permite navegar y analizar los "
+#~ "CDRs (Detalles de Llamadas)."
+
+#~ msgid "Different reporting tools are provided :"
+#~ msgstr "Diferentes herramientas par ver los resultados:"
+
+#~ msgid "Support"
+#~ msgstr "Apoyo"
+
+#, fuzzy
+#~ msgid ""
+#~ "Star2Billing S.L. offers consultancy including installation, training and "
+#~ "customisation on CDR-Stats."
+#~ msgstr ""
+#~ "Star2Billing SL ofrece servicios de consultoría que incluyen la "
+#~ "instalación, formación y personalización en todos sus productos, y el CDR "
+#~ "Stats-no tambiem."
+
+#~ msgid "Contact us at"
+#~ msgstr "Contacte con nosotros en"
+
+#~ msgid "for more information"
+#~ msgstr "para más información"
+
+#, fuzzy
+#~ msgid "Get Support"
+#~ msgstr "Apoyo"
+
+#~ msgid "Licensing"
+#~ msgstr "Licencias"
+
+#~ msgid "CDR-Stats is licensed under"
+#~ msgstr "CDR-Stats está licenciado bajo"
+
+#~ msgid "Login"
+#~ msgstr "Login"
+
+#~ msgid "Clid"
+#~ msgstr "CLID"
+
+#, fuzzy
+#~ msgid "Calls Status"
+#~ msgstr "Fecha de Llamada"
+
+#~ msgid "Please login by clicking on login button"
+#~ msgstr "Por favor, identifíquese haciendo clic en el botón Login"
+
+#, fuzzy
+#~ msgid "country calls detail"
+#~ msgstr "Detalles de las llamadas "
+
+#, fuzzy
+#~ msgid "Password reset"
+#~ msgstr "Pontraseña"
+
+#, fuzzy
+#~ msgid "Change detail"
+#~ msgstr "para más detalles."
+
+#~ msgid "Password"
+#~ msgstr "Pontraseña"
+
+#, fuzzy
+#~ msgid "Select language"
+#~ msgstr "Seleccione la fecha"
+
+#, fuzzy
+#~ msgid "Danish"
+#~ msgstr "Español"
+
+#, fuzzy
+#~ msgid "Gujarati"
+#~ msgstr "Duración"
+
+#, fuzzy
+#~ msgid "Polish"
+#~ msgstr "Inglés"
+
+#, fuzzy
+#~ msgid "Can view CDR detail"
+#~ msgstr "para más detalles."
+
+#, fuzzy
+#~ msgid "Can view CDR mail report"
+#~ msgstr "Detalles de Llamadas por día"
