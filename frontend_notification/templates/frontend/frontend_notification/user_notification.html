@@ -75,7 +75,7 @@
 <br/><br/>
 <div class="span12">
     <div class="row">
-        <form method="POST" action="del/0/" enctype="multipart/form-data" id="ListForm">
+        <form method="POST" action="/notification_del_read/0/" enctype="multipart/form-data" id="ListForm">
             {% csrf_token %}
 
             <table class="table table-striped table-bordered table-condensed">
@@ -116,6 +116,9 @@
             {% if user_notification %}
                 {% paginate %}
             {% endif %}
+            <div align=right>
+                {% trans "Total"%} : {{ user_notification_count }}
+            </div>
         </form>
     </div>
 </div>

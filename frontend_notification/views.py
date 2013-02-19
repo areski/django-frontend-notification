@@ -85,12 +85,13 @@ def get_notification_list_for_view(request):
     data = {
         'pagination_data': pagination_data,
         'user_notification': user_notification,
+        'user_notification_count': len(user_notification),
     }
     return data
 
 
 @login_required
-def user_notification(request):
+def notification_list(request):
     """User Detail change on Customer UI
 
     **Attributes**:
@@ -109,6 +110,7 @@ def user_notification(request):
     sort_order = notification_data['pagination_data']['sort_order']
     col_name_with_order = notification_data['pagination_data']['col_name_with_order']
     user_notification = notification_data['user_notification']
+    user_notification_count = notification_data['user_notification_count']
 
     msg_note = ''
     if request.GET.get('msg_note') == 'true':
@@ -127,6 +129,7 @@ def user_notification(request):
         'msg_note': msg_note,
         'notice_count': notice_count(request),
         'user_notification': user_notification,
+        'user_notification_count': user_notification_count,
         'col_name_with_order': col_name_with_order,
         'PAGE_SIZE': PAGE_SIZE,
         'NOTICE_COLUMN_NAME': NOTICE_COLUMN_NAME,
@@ -147,7 +150,7 @@ def notification_del_read(request, object_id):
     **Logic Description**:
 
         * Delete/Mark as Read the selected notification
-    """
+    """    
     try:
         # When object_id is not 0
         notification_obj = notification.Notice.objects.get(pk=object_id)
