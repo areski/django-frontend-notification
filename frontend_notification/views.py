@@ -84,7 +84,7 @@ def get_notification_list_for_view(request):
     data = {
         'pagination_data': pagination_data,
         'user_notification': user_notification,
-        'user_notification_count': len(user_notification),
+        'user_notification_count': user_notification.count(),
     }
     return data
 
@@ -126,7 +126,6 @@ def notification_list(request):
     data = {
         'module': current_view(request),
         'msg_note': msg_note,
-        'notice_count': notice_count(request.user),
         'user_notification': user_notification,
         'user_notification_count': user_notification_count,
         'col_name_with_order': col_name_with_order,
