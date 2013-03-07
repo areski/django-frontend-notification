@@ -27,6 +27,6 @@ def notification_status(val):
 
 
 @register.simple_tag(name='get_notice_count')
-def get_notice_count(request):
+def get_notice_count(user):
     """tag to display notice count"""
-    return notice_count(request)
+    return notice_count(user)
