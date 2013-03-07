@@ -21,9 +21,9 @@ def notification_style(val):
 @register.filter(name='notification_status')
 def notification_status(val):
     if val:
-        return _('New')
+        return _('new').title()
     else:
-        return _('Read')
+        return _('read').title()
 
 
 @register.simple_tag(name='get_notice_count')

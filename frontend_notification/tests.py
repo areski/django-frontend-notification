@@ -52,5 +52,5 @@ class NotificationCustomerView(BaseAuthenticatedClient):
             {'select': '1'})
         request.user = self.user
         request.session = {}
-        response = update_notification(request, 1)
+        response = update_notification(1)
         self.assertEqual(response.status_code, 302)

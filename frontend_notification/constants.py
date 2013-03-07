@@ -3,7 +3,7 @@ from common.utils import Choice
 
 
 class NOTICE_COLUMN_NAME(Choice):
-    message = _('Message')
-    notice_type = _('Notice type')
-    sender = _('Sender')
-    date_field = _('Date')
+    message = _('message')
+    notice_type = _('notice type')
+    sender = _('sender')
+    date_field = _('date')

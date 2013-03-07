@@ -11,15 +11,15 @@ from common.common_functions import current_view, get_pagination_vars
 
 
 @login_required
-def notice_count(request):
+def notice_count(user):
     """Get count of logged in user's notifications"""
     notice_count = notification.Notice.objects\
-        .filter(recipient=request.user, unseen=1)\
+        .filter(recipient=user, unseen=1)\
         .count()
     return notice_count
 
 
-def frontend_notification_status(request, id):
+def frontend_notification_status(id):
     """Notification Status (e.g. seen/unseen) need to be change.
     It is a common function for admin and customer UI
 
@@ -121,13 +121,13 @@ def notification_list(request):
         notification_list = notification.Notice.objects\
             .filter(unseen=1, recipient=request.user)
         notification_list.update(unseen=0)
-        msg_note = _('All notifications are marked as read.')
+        msg_note = _('all notifications are marked as read.')
 
     template = 'frontend/frontend_notification/user_notification.html'
     data = {
         'module': current_view(request),
         'msg_note': msg_note,
-        'notice_count': notice_count(request),
+        'notice_count': notice_count(request.user),
         'user_notification': user_notification,
         'user_notification_count': user_notification_count,
         'col_name_with_order': col_name_with_order,
@@ -150,7 +150,7 @@ def notification_del_read(request, object_id):
     **Logic Description**:
 
         * Delete/Mark as Read the selected notification
-    """    
+    """
     try:
         # When object_id is not 0
         notification_obj = notification.Notice.objects.get(pk=object_id)
@@ -191,5 +191,5 @@ def notification_del_read(request, object_id):
 def update_notification(request, id):
     """Notification Status (e.g. seen/unseen) can be changed from
     customer interface"""
-    frontend_notification_status(request, id)
+    frontend_notification_status(id)
     return HttpResponseRedirect('/user_notification/')
