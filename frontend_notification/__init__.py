@@ -3,7 +3,7 @@
 # :copyright: (c) 2011 - 2013 by Arezqui Belaid.
 # :license: MPL 2.0, see COPYING for more details.
 
-VERSION = (0, 1, 5, "")
+VERSION = (0, 1, 6, "")
 __version__ = ".".join(map(str, VERSION[0:3])) + "".join(VERSION[3:])
 __author__ = "Arezqui Belaid"
 __contact__ = "info@star2billing.com"
