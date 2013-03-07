@@ -10,7 +10,6 @@ from frontend_notification.constants import NOTICE_COLUMN_NAME
 from common.common_functions import current_view, get_pagination_vars
 
 
-@login_required
 def notice_count(user):
     """Get count of logged in user's notifications"""
     notice_count = notification.Notice.objects\
