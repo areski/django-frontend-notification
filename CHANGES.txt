@@ -2,13 +2,21 @@ Changelog
 =========
 
 
+0.1.7 (2013-11-26)
+------------------
+
+* support of bootstrap 3
+
+
 0.1.6 (2013-03-07)
 ------------------
+
 * simple template tag converted into assignment_tag
 
 
 0.1.5 (2013-03-07)
 ------------------
+
 * fix notice_count function
 * update templatetag
 * fix trans strings
