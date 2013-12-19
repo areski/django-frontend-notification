@@ -82,7 +82,7 @@ def notification_list(request):
         * User is able to change his/her detail.
     """
     sort_col_field_list = ['message', 'notice_type', 'sender', 'added']
-    default_sort_field = 'message'
+    default_sort_field = 'id'
     pagination_data = get_pagination_vars(request, sort_col_field_list, default_sort_field)
     sort_order = pagination_data['sort_order']
     PAGE_SIZE = pagination_data['PAGE_SIZE']
@@ -94,7 +94,7 @@ def notification_list(request):
     if request.method == 'POST':
         form = NotificationForm(request.POST)
         if form.is_valid():
-            request.session['session_notification_list'] = ''            
+            request.session['session_notification_list'] = ''
 
             if request.POST.get('notification_list'):
                 notification_list = request.POST.get('notification_list')
@@ -104,7 +104,7 @@ def notification_list(request):
     try:
         if request.GET.get('page') or request.GET.get('sort_by'):
             post_var_with_page = 1
-            notification_list = request.session.get('session_notification_list')            
+            notification_list = request.session.get('session_notification_list')
             form = NotificationForm(initial={'notification_list': notification_list})
         else:
             post_var_with_page = 1
@@ -116,7 +116,7 @@ def notification_list(request):
     if post_var_with_page == 0:
         # default
         # unset session var
-        request.session['session_notification_list'] = ''        
+        request.session['session_notification_list'] = ''
 
     kwargs = {}
     kwargs['sender'] = request.user
@@ -125,7 +125,7 @@ def notification_list(request):
 
     user_notification = notification.Notice.objects.filter(recipient=request.user)
     if kwargs:
-        user_notification = user_notification.filter(**kwargs)    
+        user_notification = user_notification.filter(**kwargs)
 
     all_user_notification = user_notification.order_by(sort_order)
     user_notification = all_user_notification[start_page:end_page]
@@ -143,7 +143,7 @@ def notification_list(request):
         msg_note = _('all notifications are marked as read.')
 
     template = 'frontend/frontend_notification/user_notification.html'
-    data = {        
+    data = {
         'form': form,
         'msg_note': msg_note,
         'all_user_notification': all_user_notification,
