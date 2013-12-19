@@ -2,6 +2,13 @@ Changelog
 =========
 
 
+0.1.8 (2013-12-19)
+------------------
+
+* Add filter select for notification type
+* Change default order to '-id'
+
+
 0.1.7 (2013-11-26)
 ------------------
 
