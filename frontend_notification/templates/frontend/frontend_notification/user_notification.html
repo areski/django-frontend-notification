@@ -72,10 +72,12 @@
         </div>
         <a class="btn btn-info" href="#" onclick="mark_read_all_button()">{% trans "mark all as read"|capfirst %}</a>
     </div>
-    <div class="col-md-2">
-        <form role="form" method="post" action="." enctype="multipart/form-data">
+    <div class="col-md-1">
+        <form role="form" method="post" action="." enctype="multipart/form-data">        
             {% csrf_token %}
+            <div class="col-xd-2">                      
             {{ form.notification_list }}
+            </div>
         </form>
     </div>
 </div>
