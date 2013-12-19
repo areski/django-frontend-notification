@@ -9,8 +9,7 @@ class NOTICE_COLUMN_NAME(Choice):
     date_field = _('date')
 
 
-class NOTICE_TYPE(Choice):	
-	READ = 0, _('read').title()
-	NEW = 1, _('new').title()
-	ALL = 2, _('all').title()
-	
+class NOTICE_TYPE(Choice):
+    READ = 0, _('read').title()
+    NEW = 1, _('new').title()
+    ALL = 2, _('all').title()
