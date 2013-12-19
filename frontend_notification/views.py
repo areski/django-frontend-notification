@@ -6,8 +6,9 @@ from django.template.context import RequestContext
 from django.utils.translation import ugettext_lazy as _
 from django.db.models import Q
 from notification import models as notification
-from frontend_notification.constants import NOTICE_COLUMN_NAME
-from common.common_functions import current_view, get_pagination_vars
+from frontend_notification.constants import NOTICE_COLUMN_NAME, NOTICE_TYPE
+from frontend_notification.forms import NotificationForm
+from common.common_functions import get_pagination_vars
 
 
 def notice_count(user):
@@ -66,29 +67,6 @@ def frontend_send_notification(request, status, recipient=None):
     return True
 
 
-def get_notification_list_for_view(request):
-    sort_col_field_list = ['message', 'notice_type', 'sender', 'added']
-    default_sort_field = 'message'
-    pagination_data =\
-        get_pagination_vars(request, sort_col_field_list, default_sort_field)
-    sort_order = pagination_data['sort_order']
-
-    user_notification =\
-        notification.Notice.objects.filter(recipient=request.user)
-    # Search on sender name
-    q = (Q(sender=request.user))
-    if q:
-        user_notification = user_notification.filter(q)
-
-    user_notification = user_notification.order_by(sort_order)
-    data = {
-        'pagination_data': pagination_data,
-        'user_notification': user_notification,
-        'user_notification_count': user_notification.count(),
-    }
-    return data
-
-
 @login_required
 def notification_list(request):
     """User Detail change on Customer UI
@@ -103,13 +81,55 @@ def notification_list(request):
 
         * User is able to change his/her detail.
     """
+    sort_col_field_list = ['message', 'notice_type', 'sender', 'added']
+    default_sort_field = 'message'
+    pagination_data = get_pagination_vars(request, sort_col_field_list, default_sort_field)
+    sort_order = pagination_data['sort_order']
+    PAGE_SIZE = pagination_data['PAGE_SIZE']
+    start_page = pagination_data['start_page']
+    end_page = pagination_data['end_page']
+    form = NotificationForm(initial={'notification_list': NOTICE_TYPE.ALL})
 
-    notification_data = get_notification_list_for_view(request)
-    PAGE_SIZE = notification_data['pagination_data']['PAGE_SIZE']
-    sort_order = notification_data['pagination_data']['sort_order']
-    col_name_with_order = notification_data['pagination_data']['col_name_with_order']
-    user_notification = notification_data['user_notification']
-    user_notification_count = notification_data['user_notification_count']
+    notification_list = NOTICE_TYPE.ALL
+    if request.method == 'POST':
+        form = NotificationForm(request.POST)
+        if form.is_valid():
+            request.session['session_notification_list'] = ''            
+
+            if request.POST.get('notification_list'):
+                notification_list = request.POST.get('notification_list')
+                request.session['session_notification_list'] = notification_list
+
+    post_var_with_page = 0
+    try:
+        if request.GET.get('page') or request.GET.get('sort_by'):
+            post_var_with_page = 1
+            notification_list = request.session.get('session_notification_list')            
+            form = NotificationForm(initial={'notification_list': notification_list})
+        else:
+            post_var_with_page = 1
+            if request.method == 'GET':
+                post_var_with_page = 0
+    except:
+        pass
+
+    if post_var_with_page == 0:
+        # default
+        # unset session var
+        request.session['session_notification_list'] = ''        
+
+    kwargs = {}
+    kwargs['sender'] = request.user
+    if notification_list and notification_list != NOTICE_TYPE.ALL:
+        kwargs['unseen'] = notification_list
+
+    user_notification = notification.Notice.objects.filter(recipient=request.user)
+    if kwargs:
+        user_notification = user_notification.filter(**kwargs)    
+
+    all_user_notification = user_notification.order_by(sort_order)
+    user_notification = all_user_notification[start_page:end_page]
+    user_notification_count = all_user_notification.count()
 
     msg_note = ''
     if request.GET.get('msg_note') == 'true':
@@ -123,12 +143,12 @@ def notification_list(request):
         msg_note = _('all notifications are marked as read.')
 
     template = 'frontend/frontend_notification/user_notification.html'
-    data = {
-        'module': current_view(request),
+    data = {        
+        'form': form,
         'msg_note': msg_note,
         'user_notification': user_notification,
         'user_notification_count': user_notification_count,
-        'col_name_with_order': col_name_with_order,
+        'col_name_with_order': pagination_data['col_name_with_order'],
         'PAGE_SIZE': PAGE_SIZE,
         'NOTICE_COLUMN_NAME': NOTICE_COLUMN_NAME,
     }

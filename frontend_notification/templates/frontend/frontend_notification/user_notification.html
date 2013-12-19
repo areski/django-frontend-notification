@@ -57,8 +57,11 @@
         <strong>{% trans "alert"|title %} : </strong>  {{ msg_note|capfirst }}
     </div>
 {% endif %}
+
+
+<div></div>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-11">
         <div class="btn-group">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             {% trans "action"|capfirst %} <span class="caret"></span>
@@ -68,12 +71,16 @@
                 <li><a href="#" onclick="delete_button()">{% trans "delete notifications"|capfirst %}</a></li>
             </ul>
         </div>
-        <a class="btn btn-info" href="#" onclick="mark_read_all_button()">{% trans "mark all as read"|capfirst %}</a>
+        <a class="btn btn-info" href="#" onclick="mark_read_all_button()">{% trans "mark all as read"|capfirst %}</a>      
+    </div>
+    <div class="col-md-1">
+        <form role="form" method="post" action="." enctype="multipart/form-data">        
+            {% csrf_token %}                        
+            {{ form.notification_list }}              
+        </form>
     </div>
 </div>
-
 <br/>
-
 <div class="row">
     <div class="col-md-12">
         <form method="POST" action="/notification_del_read/0/" enctype="multipart/form-data" id="ListForm">
@@ -125,7 +132,7 @@
     </div>
 </div>
 
-<script type="text/javascript">
+<script type="text/javascript">    
     function change_status(id){
         window.location.replace("../update_notification/" + String(id) + "/");
     }
