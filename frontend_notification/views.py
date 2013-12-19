@@ -146,6 +146,7 @@ def notification_list(request):
     data = {        
         'form': form,
         'msg_note': msg_note,
+        'all_user_notification': all_user_notification,
         'user_notification': user_notification,
         'user_notification_count': user_notification_count,
         'col_name_with_order': pagination_data['col_name_with_order'],

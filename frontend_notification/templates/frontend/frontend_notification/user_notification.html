@@ -97,8 +97,8 @@
                         <th>{% trans "action"|capfirst %}</th>
                     </tr>
                     </thead>
-                    {% if user_notification %}
-                        {% autopaginate user_notification PAGE_SIZE %}
+                    {% if all_user_notification %}
+                        {% autopaginate all_user_notification PAGE_SIZE %}
                         {% for row in user_notification %}
                             <tr>
                                 <td><input type="checkbox" name="select" class="checkbox" value="{{ row.id }}" /></td>
@@ -122,8 +122,8 @@
                     {% endif %}
                 </table>
             </div>
-            {% if user_notification %}
-                {% paginate %}
+            {% if all_user_notification %}
+                {% paginate %}                
             {% endif %}
             <div class="text-right">
                 {% trans "total"|capfirst %} : {{ user_notification_count }}
