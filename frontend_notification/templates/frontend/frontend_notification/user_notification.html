@@ -75,8 +75,10 @@
     </div>
     <div class="col-md-1">
         <form role="form" method="post" action="." enctype="multipart/form-data">        
-            {% csrf_token %}                        
-            {{ form.notification_list }}              
+            {% csrf_token %}
+            <div class="col-xd-2">                      
+            {{ form.notification_list }}
+            </div>           
         </form>
     </div>
 </div>
