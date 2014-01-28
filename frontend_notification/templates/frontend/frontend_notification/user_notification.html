@@ -5,7 +5,7 @@
     <script type="text/javascript" language="javascript">
         function toggleChecked(status) {
             $(".checkbox").each( function() {
-                $(this).attr("checked", status);
+                $(this).prop("checked", status);
             })
         }
 
@@ -32,17 +32,14 @@
                             confirm_string = $fields.length + '{% trans " notification(s) are going to be marked as read?" %}';
                         }
                     }
-
                     bootbox.confirm(confirm_string, function(result) {
                         if (result) {
                             currentForm.submit();
                         }
                     });
-
                     return false;
                 }
             });
-
         });
     </script>
 {% endblock %}
