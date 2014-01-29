@@ -31,7 +31,7 @@ Bug tracker: https://github.com/areski/django-frontend-notification/issues
 License
 =======
 
-Copyright (c) 2011-2012 Star2Billing S.L. <info@star2billing.com>
+Copyright (c) 2011-2014 Star2Billing S.L. <info@star2billing.com>
 
 django-frontend-notification is licensed under MIT, see `MIT-LICENSE.txt`.
 
