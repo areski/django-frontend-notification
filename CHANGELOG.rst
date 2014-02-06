@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+0.2.0 (2014-02-06)
+------------------
+
+* update dependencies from common to django-lets-go
+
+
 0.1.9 (2014-01-29)
 ------------------
 

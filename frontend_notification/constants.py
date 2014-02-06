@@ -1,5 +1,5 @@
 from django.utils.translation import ugettext_lazy as _
-from common.utils import Choice
+from django_lets_go.utils import Choice
 
 
 class NOTICE_COLUMN_NAME(Choice):

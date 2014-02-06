@@ -1,3 +1,3 @@
-switch2bill-common>=2.4
+django-lets-go>=2.8.5
 linaro-django-pagination==2.0.2
 git+git://github.com/Star2Billing/django-notification

@@ -8,7 +8,7 @@ from django.db.models import Q
 from notification import models as notification
 from frontend_notification.constants import NOTICE_COLUMN_NAME, NOTICE_TYPE
 from frontend_notification.forms import NotificationForm
-from common.common_functions import get_pagination_vars
+from django_lets_go.common_functions import get_pagination_vars
 
 
 def notice_count(user):
@@ -153,7 +153,8 @@ def notification_list(request):
         'PAGE_SIZE': PAGE_SIZE,
         'NOTICE_COLUMN_NAME': NOTICE_COLUMN_NAME,
     }
-    return render_to_response(template, data,
+    return render_to_response(
+        template, data,
         context_instance=RequestContext(request))
 
 
