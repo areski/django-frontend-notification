@@ -4,7 +4,6 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.template.context import RequestContext
 from django.utils.translation import ugettext_lazy as _
-from django.db.models import Q
 from notification import models as notification
 from frontend_notification.constants import NOTICE_COLUMN_NAME, NOTICE_TYPE
 from frontend_notification.forms import NotificationForm
@@ -62,7 +61,7 @@ def frontend_send_notification(request, status, recipient=None):
 
     if notification:
         note_label = notification.NoticeType.objects.get(default=status)
-        notification.send(
+        notification.send_now(
             [recipient], note_label.label, {"from_user": request.user}, sender=sender)
     return True
 
