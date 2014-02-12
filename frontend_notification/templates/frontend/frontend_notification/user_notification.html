@@ -94,7 +94,7 @@
                     </tr>
                     </thead>
                     {% if all_user_notification %}
-                        {% autopaginate all_user_notification PAGE_SIZE %}
+                        {% autopaginate all_user_notification 10 %}
                         {% for row in user_notification %}
                             <tr>
                                 <td><input type="checkbox" name="select" class="checkbox" value="{{ row.id }}" /></td>

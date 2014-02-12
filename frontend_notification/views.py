@@ -10,14 +10,6 @@ from frontend_notification.forms import NotificationForm
 from django_lets_go.common_functions import get_pagination_vars
 
 
-def notice_count(user):
-    """Get count of logged in user's notifications"""
-    notice_count = notification.Notice.objects\
-        .filter(recipient=user, unseen=1)\
-        .count()
-    return notice_count
-
-
 def frontend_notification_status(id):
     """Notification Status (e.g. seen/unseen) need to be change.
     It is a common function for admin and customer UI
@@ -61,8 +53,7 @@ def frontend_send_notification(request, status, recipient=None):
 
     if notification:
         note_label = notification.NoticeType.objects.get(default=status)
-        notification.send_now(
-            [recipient], note_label.label, {"from_user": request.user}, sender=sender)
+        notification.send_now([recipient], note_label.label, {"from_user": request.user}, sender=sender)
     return True
 
 
@@ -81,36 +72,23 @@ def notification_list(request):
         * User is able to change his/her detail.
     """
     sort_col_field_list = ['message', 'notice_type', 'sender', 'added']
-    default_sort_field = 'id'
-    pagination_data = get_pagination_vars(request, sort_col_field_list, default_sort_field)
-    sort_order = pagination_data['sort_order']
-    PAGE_SIZE = pagination_data['PAGE_SIZE']
-    start_page = pagination_data['start_page']
-    end_page = pagination_data['end_page']
-    form = NotificationForm(initial={'notification_list': NOTICE_TYPE.ALL})
+    pag_vars = get_pagination_vars(request, sort_col_field_list, default_sort_field='id')
+    form = NotificationForm(request.POST or None, initial={'notification_list': NOTICE_TYPE.ALL})
 
     notification_list = NOTICE_TYPE.ALL
-    if request.method == 'POST':
-        form = NotificationForm(request.POST)
-        if form.is_valid():
-            request.session['session_notification_list'] = ''
-
-            if request.POST.get('notification_list'):
-                notification_list = request.POST.get('notification_list')
-                request.session['session_notification_list'] = notification_list
-
     post_var_with_page = 0
-    try:
-        if request.GET.get('page') or request.GET.get('sort_by'):
-            post_var_with_page = 1
-            notification_list = request.session.get('session_notification_list')
-            form = NotificationForm(initial={'notification_list': notification_list})
-        else:
-            post_var_with_page = 1
-            if request.method == 'GET':
-                post_var_with_page = 0
-    except:
-        pass
+    if form.is_valid():
+        request.session['session_notification_list'] = ''
+        post_var_with_page = 1
+
+        if request.POST.get('notification_list'):
+            notification_list = request.POST.get('notification_list')
+            request.session['session_notification_list'] = notification_list
+
+    if request.GET.get('page') or request.GET.get('sort_by'):
+        post_var_with_page = 1
+        notification_list = request.session.get('session_notification_list')
+        form = NotificationForm(initial={'notification_list': notification_list})
 
     if post_var_with_page == 0:
         # default
@@ -126,8 +104,8 @@ def notification_list(request):
     if kwargs:
         user_notification = user_notification.filter(**kwargs)
 
-    all_user_notification = user_notification.order_by(sort_order)
-    user_notification = all_user_notification[start_page:end_page]
+    all_user_notification = user_notification.order_by(pag_vars['sort_order'])
+    user_notification = all_user_notification[pag_vars['start_page']:pag_vars['end_page']]
     user_notification_count = all_user_notification.count()
 
     msg_note = ''
@@ -136,25 +114,20 @@ def notification_list(request):
 
     # Mark all notification as read
     if request.GET.get('notification') == 'mark_read_all':
-        notification_list = notification.Notice.objects\
-            .filter(unseen=1, recipient=request.user)
+        notification_list = notification.Notice.objects.filter(unseen=1, recipient=request.user)
         notification_list.update(unseen=0)
         msg_note = _('all notifications are marked as read.')
 
-    template = 'frontend/frontend_notification/user_notification.html'
     data = {
         'form': form,
         'msg_note': msg_note,
         'all_user_notification': all_user_notification,
         'user_notification': user_notification,
         'user_notification_count': user_notification_count,
-        'col_name_with_order': pagination_data['col_name_with_order'],
-        'PAGE_SIZE': PAGE_SIZE,
+        'col_name_with_order': pag_vars['col_name_with_order'],
         'NOTICE_COLUMN_NAME': NOTICE_COLUMN_NAME,
     }
-    return render_to_response(
-        template, data,
-        context_instance=RequestContext(request))
+    return render_to_response('frontend/frontend_notification/user_notification.html', data, context_instance=RequestContext(request))
 
 
 @login_required
@@ -176,34 +149,25 @@ def notification_del_read(request, object_id):
         # Delete/Read notification
         if object_id:
             if request.POST.get('mark_read') == 'false':
-                request.session["msg_note"] = _('"%(name)s" is deleted.')\
-                    % {'name': notification_obj.notice_type}
+                request.session["msg_note"] = _('"%(name)s" is deleted.') % {'name': notification_obj.notice_type}
                 notification_obj.delete()
             else:
-                request.session["msg_note"] = _('"%(name)s" is marked as read.')\
-                    % {'name': notification_obj.notice_type}
+                request.session["msg_note"] = _('"%(name)s" is marked as read.') % {'name': notification_obj.notice_type}
                 notification_obj.update(unseen=0)
 
-            return HttpResponseRedirect(
-                '/user_notification/?msg_note=true')
+            return HttpResponseRedirect('/user_notification/?msg_note=true')
     except:
         # When object_id is 0 (Multiple records delete/mark as read)
         values = request.POST.getlist('select')
         values = ", ".join(["%s" % el for el in values])
-        notification_list =\
-            notification.Notice.objects.extra(where=['id IN (%s)' % values])
+        notification_list = notification.Notice.objects.extra(where=['id IN (%s)' % values])
         if request.POST.get('mark_read') == 'false':
-            request.session["msg_note"] =\
-                _('%(count)s notification(s) are deleted.')\
-                % {'count': notification_list.count()}
+            request.session["msg_note"] = _('%(count)s notification(s) are deleted.') % {'count': notification_list.count()}
             notification_list.delete()
         else:
-            request.session["msg_note"] =\
-                _('%(count)s notification(s) are marked as read.')\
-                % {'count': notification_list.count()}
+            request.session["msg_note"] = _('%(count)s notification(s) are marked as read.') % {'count': notification_list.count()}
             notification_list.update(unseen=0)
-        return HttpResponseRedirect(
-            '/user_notification/?msg_note=true')
+        return HttpResponseRedirect('/user_notification/?msg_note=true')
 
 
 @login_required
