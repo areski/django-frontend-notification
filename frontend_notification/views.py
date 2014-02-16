@@ -127,7 +127,8 @@ def notification_list(request):
         'col_name_with_order': pag_vars['col_name_with_order'],
         'NOTICE_COLUMN_NAME': NOTICE_COLUMN_NAME,
     }
-    return render_to_response('frontend/frontend_notification/user_notification.html', data, context_instance=RequestContext(request))
+    return render_to_response(
+        'frontend/frontend_notification/user_notification.html', data, context_instance=RequestContext(request))
 
 
 @login_required
@@ -152,7 +153,8 @@ def notification_del_read(request, object_id):
                 request.session["msg_note"] = _('"%(name)s" is deleted.') % {'name': notification_obj.notice_type}
                 notification_obj.delete()
             else:
-                request.session["msg_note"] = _('"%(name)s" is marked as read.') % {'name': notification_obj.notice_type}
+                request.session["msg_note"] = _('"%(name)s" is marked as read.') % \
+                    {'name': notification_obj.notice_type}
                 notification_obj.update(unseen=0)
 
             return HttpResponseRedirect('/user_notification/?msg_note=true')
@@ -162,10 +164,12 @@ def notification_del_read(request, object_id):
         values = ", ".join(["%s" % el for el in values])
         notification_list = notification.Notice.objects.extra(where=['id IN (%s)' % values])
         if request.POST.get('mark_read') == 'false':
-            request.session["msg_note"] = _('%(count)s notification(s) are deleted.') % {'count': notification_list.count()}
+            request.session["msg_note"] = _('%(count)s notification(s) are deleted.') % \
+                {'count': notification_list.count()}
             notification_list.delete()
         else:
-            request.session["msg_note"] = _('%(count)s notification(s) are marked as read.') % {'count': notification_list.count()}
+            request.session["msg_note"] = _('%(count)s notification(s) are marked as read.') % \
+                {'count': notification_list.count()}
             notification_list.update(unseen=0)
         return HttpResponseRedirect('/user_notification/?msg_note=true')
 
