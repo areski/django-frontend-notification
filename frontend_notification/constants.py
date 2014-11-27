@@ -2,13 +2,6 @@ from django.utils.translation import ugettext_lazy as _
 from django_lets_go.utils import Choice
 
 
-class NOTICE_COLUMN_NAME(Choice):
-    message = _('message')
-    notice_type = _('notice type')
-    sender = _('sender')
-    date_field = _('date')
-
-
 class NOTICE_TYPE(Choice):
     READ = 0, _('Read')
     NEW = 1, _('New')

@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.template.context import RequestContext
 from django.utils.translation import ugettext_lazy as _
 from notification import models as notification
-from frontend_notification.constants import NOTICE_COLUMN_NAME, NOTICE_TYPE
+from frontend_notification.constants import NOTICE_TYPE
 from frontend_notification.forms import NotificationForm
 from django_lets_go.common_functions import get_pagination_vars
 
@@ -125,7 +125,6 @@ def notification_list(request):
         'user_notification': user_notification,
         'user_notification_count': user_notification_count,
         'col_name_with_order': pag_vars['col_name_with_order'],
-        'NOTICE_COLUMN_NAME': NOTICE_COLUMN_NAME,
     }
     return render_to_response(
         'frontend/frontend_notification/user_notification.html', data, context_instance=RequestContext(request))
