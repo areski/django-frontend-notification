@@ -10,6 +10,6 @@ class NOTICE_COLUMN_NAME(Choice):
 
 
 class NOTICE_TYPE(Choice):
-    READ = 0, _('read').title()
-    NEW = 1, _('new').title()
-    ALL = 2, _('all').title()
+    READ = 0, _('Read')
+    NEW = 1, _('New')
+    ALL = 2, _('All')
