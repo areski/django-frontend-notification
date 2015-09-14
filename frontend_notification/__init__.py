@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# :copyright: (c) 2011 - 2014 by Arezqui Belaid.
+# :copyright: (c) 2011 - 2015 by Arezqui Belaid.
 # :license: MPL 2.0, see COPYING for more details.
 
 __version__ = '0.3.0'
