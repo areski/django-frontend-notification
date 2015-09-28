@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.3.2 (2015-09-28)
+------------------
+
+* Fix dep linaro-django-pagination: removed from PyPI
+
 
 0.2.0 (2014-02-06)
 ------------------
