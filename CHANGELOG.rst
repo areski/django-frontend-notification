@@ -1,6 +1,13 @@
 Changelog
 =========
 
+
+0.3.3 (2015-12-10)
+------------------
+
+* rollback previous change and use linaro-django-pagination
+
+
 0.3.2 (2015-09-28)
 ------------------
 
