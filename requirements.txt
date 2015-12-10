@@ -1,3 +1,3 @@
 django-lets-go>=2.8.5
-git+git://github.com/cdr-stats/django-pagination.git
+linaro-django-pagination>=2.0.3
 git+git://github.com/Star2Billing/django-notification
