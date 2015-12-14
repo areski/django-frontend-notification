@@ -8,7 +8,7 @@
          "sender":1,
          "on_site":true,
          "notice_type":1,
-         "unseen":true,
+         "unread":true,
          "message":"Campaign started",
          "recipient":1
       }
@@ -22,7 +22,7 @@
            "sender":1,
            "on_site":true,
            "notice_type":1,
-           "unseen":true,
+           "unread":true,
            "message":"Campaign started",
            "recipient":1
        }
