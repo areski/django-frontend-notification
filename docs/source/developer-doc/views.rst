@@ -44,7 +44,7 @@ Django-Frontend-Notification Views
 :class:`update_notification`
 ----------------------------
 
-  Notification Status (e.g. seen/unseen) can be changed from
+  Notification Status (e.g. read/unread) can be changed from
       customer interface
 
 
@@ -70,7 +70,7 @@ Django-Frontend-Notification Views
 :class:`frontend_notification_status`
 -------------------------------------
 
-  Notification Status (e.g. seen/unseen) need to be change.
+  Notification Status (e.g. read/unread) need to be change.
       It is a common function for admin and customer UI
 
       **Attributes**:
@@ -80,7 +80,7 @@ Django-Frontend-Notification Views
       **Logic Description**:
 
           * Selected Notification's status need to be changed.
-            Changed status can be seen or unseen.
+            Changed status can be read or unread.
 
 
 .. _notice-count:

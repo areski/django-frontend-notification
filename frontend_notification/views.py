@@ -4,14 +4,16 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.template.context import RequestContext
 from django.utils.translation import ugettext_lazy as _
-from notification import models as notification
 from frontend_notification.constants import NOTICE_TYPE
 from frontend_notification.forms import NotificationForm
 from django_lets_go.common_functions import get_pagination_vars
+# from notification import models as notification
+from notifications.signals import notify
+from notifications.models import Notification
 
 
 def frontend_notification_status(id):
-    """Notification Status (e.g. seen/unseen) need to be change.
+    """Notification Status (e.g. read/unread) need to be change.
     It is a common function for admin and customer UI
 
     **Attributes**:
@@ -21,18 +23,18 @@ def frontend_notification_status(id):
     **Logic Description**:
 
         * Selected Notification's status need to be changed.
-          Changed status can be seen or unseen.
+          Changed status can be read or unread.
     """
-    notice = notification.Notice.objects.get(pk=id)
-    if notice.unseen == 1:
-        notice.unseen = 0
+    notice = Notification.objects.get(pk=id)
+    if notice.unread:
+        notice.unread = False
     else:
-        notice.unseen = 1
+        notice.unread = True
     notice.save()
     return True
 
 
-def frontend_send_notification(request, status, recipient=None):
+def frontend_send_notification(request, verb, recipient=None, label=None):
     """User Notification (e.g. start | stop | pause | abort |
     contact/campaign limit) needs to be saved.
     It is a common function for the admin and customer UI's
@@ -40,7 +42,8 @@ def frontend_send_notification(request, status, recipient=None):
     **Attributes**:
 
         * ``pk`` - primary key of the campaign record
-        * ``status`` - get label for notifications
+        * ``verb`` - get verb for notifications
+        * ``label`` - description of the notification
     """
     if not recipient:
         recipient = request.user
@@ -51,9 +54,7 @@ def frontend_send_notification(request, status, recipient=None):
         else:
             sender = request.user
 
-    if notification:
-        note_label = notification.NoticeType.objects.get(default=status)
-        notification.send_now([recipient], note_label.label, {"from_user": request.user}, sender=sender)
+    notify.send(sender, description=label, recipient=recipient, verb=verb)
     return True
 
 
@@ -71,10 +72,17 @@ def notification_list(request):
 
         * User is able to change his/her detail.
     """
-    sort_col_field_list = ['message', 'notice_type', 'sender', 'added']
+    sort_col_field_list = ['description', 'verb', 'level', 'timestamp']
+    coltitle = {
+        'description': _("Description"),
+        'verb': _("Verb"),
+        'level': _("Level"),
+        'timestamp': _("Date"),
+    }
     pag_vars = get_pagination_vars(request, sort_col_field_list, default_sort_field='id')
     form = NotificationForm(request.POST or None, initial={'notification_list': NOTICE_TYPE.ALL})
 
+    # TODO: rename notification_list to type_filter
     notification_list = NOTICE_TYPE.ALL
     post_var_with_page = 0
     if form.is_valid():
@@ -90,17 +98,21 @@ def notification_list(request):
         notification_list = request.session.get('session_notification_list')
         form = NotificationForm(initial={'notification_list': notification_list})
 
+    notification_list = int(notification_list)
+
     if post_var_with_page == 0:
-        # default
         # unset session var
         request.session['session_notification_list'] = ''
 
     kwargs = {}
-    kwargs['sender'] = request.user
-    if notification_list and notification_list != NOTICE_TYPE.ALL:
-        kwargs['unseen'] = notification_list
+    # kwargs['sender'] = request.user
+    if notification_list == NOTICE_TYPE.UNREAD:
+        kwargs['unread'] = True
 
-    user_notification = notification.Notice.objects.filter(recipient=request.user)
+    if notification_list == NOTICE_TYPE.READ:
+        kwargs['unread'] = False
+
+    user_notification = Notification.objects.filter(recipient=request.user)
     if kwargs:
         user_notification = user_notification.filter(**kwargs)
 
@@ -114,11 +126,12 @@ def notification_list(request):
 
     # Mark all notification as read
     if request.GET.get('notification') == 'mark_read_all':
-        notification_list = notification.Notice.objects.filter(unseen=1, recipient=request.user)
-        notification_list.update(unseen=0)
+        notification_list = Notification.objects.filter(unread=True, recipient=request.user)
+        notification_list.update(unread=False)
         msg_note = _('all notifications are marked as read.')
 
     data = {
+        'coltitle': coltitle,
         'form': form,
         'msg_note': msg_note,
         'all_user_notification': all_user_notification,
@@ -145,7 +158,7 @@ def notification_del_read(request, object_id):
     """
     try:
         # When object_id is not 0
-        notification_obj = notification.Notice.objects.get(pk=object_id)
+        notification_obj = Notification.objects.get(pk=object_id)
         # Delete/Read notification
         if object_id:
             if request.POST.get('mark_read') == 'false':
@@ -154,14 +167,14 @@ def notification_del_read(request, object_id):
             else:
                 request.session["msg_note"] = _('"%(name)s" is marked as read.') % \
                     {'name': notification_obj.notice_type}
-                notification_obj.update(unseen=0)
+                notification_obj.update(unread=False)
 
             return HttpResponseRedirect('/user_notification/?msg_note=true')
     except:
         # When object_id is 0 (Multiple records delete/mark as read)
         values = request.POST.getlist('select')
         values = ", ".join(["%s" % el for el in values])
-        notification_list = notification.Notice.objects.extra(where=['id IN (%s)' % values])
+        notification_list = Notification.objects.extra(where=['id IN (%s)' % values])
         if request.POST.get('mark_read') == 'false':
             request.session["msg_note"] = _('%(count)s notification(s) are deleted.') % \
                 {'count': notification_list.count()}
@@ -169,13 +182,13 @@ def notification_del_read(request, object_id):
         else:
             request.session["msg_note"] = _('%(count)s notification(s) are marked as read.') % \
                 {'count': notification_list.count()}
-            notification_list.update(unseen=0)
+            notification_list.update(unread=False)
         return HttpResponseRedirect('/user_notification/?msg_note=true')
 
 
 @login_required
 def update_notification(request, id):
-    """Notification Status (e.g. seen/unseen) can be changed from
+    """Notification Status (e.g. read/unread) can be changed from
     customer interface"""
     frontend_notification_status(id)
     return HttpResponseRedirect('/user_notification/')

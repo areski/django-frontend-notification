@@ -20,6 +20,6 @@ def notification_style(val):
 @register.filter(name='notification_status')
 def notification_status(val):
     if val:
-        return _('new').title()
+        return _('unread').title()
     else:
         return _('read').title()
