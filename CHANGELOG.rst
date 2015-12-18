@@ -2,6 +2,12 @@ Changelog
 =========
 
 
+1.0.2 (2015-12-18)
+------------------
+
+* still problem with django-notifications-hq==0.8.0 (not compatible with Django1.9)
+
+
 1.0.1 (2015-12-18)
 ------------------
 
