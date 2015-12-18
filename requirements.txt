@@ -1,6 +1,4 @@
 django-lets-go>=2.8.5
-#linaro not compatible with Django 1.9
-#linaro-django-pagination>=2.0.3
+django-notifications-hq==0.8.0
+#linaro-django-pagination>=2.0.3 #linaro not compatible with Django 1.9
 git+git://github.com/areski/django-pagination.git@17e120899efc18a888b0038f8ae40b7448bf62c2
-#django-notifications-hq>=0.7.1
-git+git://github.com/areski/django-notifications.git@7634dff2905a755690bd2eb04b0dec6be8f8936b
